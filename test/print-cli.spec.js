@@ -4,7 +4,7 @@ const spawn = require("child_process").spawn,
     expect = require("chai").expect,
     version = require('./../package.json').version,
     EXEC_PATH = require('path').resolve(`${__dirname}/../src/print-cli.js`),
-    TEST_DATA_RES = '______ ______ _____ ______   ____   ___   ______ ___ \n      /_  __// ____// ___//_  __/  / __ \\ /   | /_  __//   |\n       / /  / __/   \\__ \\  / /    / / / // /| |  / /  / /| |\n      / /  / /___  ___/ / / /    / /_/ // ___ | / /  / ___ |\n     /_/  /_____/ /____/ /_/    /_____//_/  |_|/_/  /_/  |_|\n                                                            \n',
+    TEST_DATA_RES = '\n  ______ ______ _____ ______   ____   ___   ______ ___ \n /_  __// ____// ___//_  __/  / __ \\ /   | /_  __//   |\n  / /  / __/   \\__ \\  / /    / / / // /| |  / /  / /| |\n / /  / /___  ___/ / / /    / /_/ // ___ | / /  / ___ |\n/_/  /_____/ /____/ /_/    /_____//_/  |_|/_/  /_/  |_|\n',
     TEST_HELP_RES = '\n  Usage: print-cli [options] [text]\n\n\n  Options:\n\n        --version          output the version number\n        --banner           print banner in ASCII style\n    -f  --font [value]     font used to print text [standard|doom|slant|bell|chunky]\n    -c  --color [value]    color of the printed text [blue|black|cyan|green|grey|magenta|red|white|yellow]\n        --bgColor [value]  background color of the printed text [bgBlack|bgBlue|bgCyan|bgGreen|bgMagenta|bgRed|bgWhite|bgYellow]\n    -h, --help             output usage information\n\n  Examples:\n\n    $ print-cli --color red "print banner"\n    $ print-cli --help\n\n';
 
 describe('src/print-cli --- ', () => {

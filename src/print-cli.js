@@ -141,9 +141,6 @@ function printBanner(inputData) {
     // trim input data
     inputData.trim();
 
-    // add space
-    inputData = ' ' + inputData;
-
     // figlet input data
     inputData = figlet.textSync(inputData, {
         font: pickedFont,
