@@ -1,6 +1,6 @@
 {
   "name": "print-cli",
-  "version": "1.0.1-rc3",
+  "version": "1.0.2",
   "description": "print command line interface",
   "main": "./src/print-cli.js",
   "directories": {

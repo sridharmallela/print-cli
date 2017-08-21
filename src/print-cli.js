@@ -3,12 +3,11 @@
 'use strict';
 
 const commander = require('commander'),
-    pkg = require('./../package.json'),
+    version = require('./../package.json').version,
     colors = require('colors'),
     figlet = require('figlet');
 
-const version = pkg.version,
-    _exit = process.exit,
+const _exit = process.exit,
     availableColors = [
         'blue', 'black', 'cyan', 'green',
         'grey', 'magenta', 'red', 'white', 'yellow'
