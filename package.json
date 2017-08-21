@@ -1,6 +1,6 @@
 {
   "name": "print-cli",
-  "version": "1.0.1",
+  "version": "1.0.1-rc3",
   "description": "print command line interface",
   "main": "./src/print-cli.js",
   "directories": {
@@ -18,7 +18,7 @@
     "node": ">= 4.7"
   },
   "bin": {
-    "print-cli": "./bin/print-cli.js"
+    "print-cli": "./src/print-cli.js"
   },
   "author": "Sridhar Mallela",
   "license": "MIT",
