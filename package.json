@@ -21,7 +21,7 @@
     "print-cli": "./bin/print-cli.js"
   },
   "author": "Sridhar Mallela",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sridharmallela/print-cli/issues"
   },
@@ -43,7 +43,7 @@
     }
   },
   "scripts": {
-    "precommit": "npm run test && npm start",
+    "precommit": "npm run test",
     "commitmsg": "validate-commit-msg",
     "lint": "eslint .",
     "test": "npm run lint && mocha test",
