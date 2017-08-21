@@ -1,0 +1,66 @@
+{
+  "name": "print-cli",
+  "version": "1.0.0",
+  "description": "print command line interface",
+  "main": "./bin/print-cli.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sridharmallela/print-cli.git"
+  },
+  "keywords": [
+    "Print",
+    "CLI"
+  ],
+  "engines": {
+    "node": ">= 4.7"
+  },
+  "bin": {
+    "print-cli": "./bin/print-cli.js"
+  },
+  "author": "Sridhar Mallela",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sridharmallela/print-cli/issues"
+  },
+  "homepage": "https://github.com/sridharmallela/print-cli#readme",
+  "config": {
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "test",
+        "chore"
+      ],
+      "warnOnFail": false,
+      "maxSubjectLength": 1500,
+      "helpMessage": "use karma style git commit pattern"
+    }
+  },
+  "scripts": {
+    "precommit": "npm run test && npm start",
+    "commitmsg": "validate-commit-msg",
+    "lint": "eslint .",
+    "test": "npm run lint && mocha test",
+    "start": "node ./src/print-cli.js"
+  },
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.11.0",
+    "figlet": "^1.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "child_process": "^1.0.2",
+    "eslint": "^4.5.0",
+    "husky": "^0.14.3",
+    "mocha": "^3.5.0",
+    "path": "^0.12.7",
+    "validate-commit-message": "^3.0.1"
+  }
+}
