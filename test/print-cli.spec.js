@@ -59,8 +59,8 @@ describe('src/print-cli --- ', () => {
                 expect(err).to.be.eql(null);
                 expect(stdout).not.to.be.empty;
                 expect(stdout).not.to.be.undefined;
-                expect(stdout).to.contain('1.0.0');
-                expect(stdout).to.eql('1.0.0\n');
+                expect(stdout).to.contain('1.0.1');
+                expect(stdout).to.eql('1.0.1\n');
                 done();
             });
         });
