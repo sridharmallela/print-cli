@@ -1,10 +1,33 @@
 # Dev #
+.*.swp
+._*
+.DS_Store
+.git
+.hg
+.npmrc
+.lock-wscript
+.svn
+.wafpickle-*
+config.gypi
 *.ts
 !*.d.ts
 tests
 e2e
 karma.conf.js
 karma-test-shim.js
-node_modules
 coverage
 npm-debug.log
+
+## project specific
+# test folder
+test
+# src folder
+lib
+# other files
+_config.yml
+.editorconfig
+.eslintignore
+.eslintrc
+.gitignore
+.npmrc
+.vcmrc

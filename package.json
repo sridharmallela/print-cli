@@ -1,10 +1,10 @@
 {
   "name": "print-cli",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "print command line interface",
-  "main": "./src/print-cli.js",
+  "main": "./bin/print-cli.js",
   "directories": {
-    "test": "test"
+    "bin": "bin"
   },
   "repository": {
     "type": "git",
@@ -14,11 +14,8 @@
     "Print",
     "CLI"
   ],
-  "engines": {
-    "node": ">= 4.7"
-  },
   "bin": {
-    "print-cli": "./src/print-cli.js"
+    "print-cli": "./bin/print-cli"
   },
   "author": "Sridhar Mallela",
   "license": "MIT",
@@ -27,6 +24,7 @@
   },
   "homepage": "https://github.com/sridharmallela/print-cli#readme",
   "config": {
+    "unsafe-perm": true,
     "validate-commit-msg": {
       "types": [
         "feat",
@@ -43,11 +41,17 @@
     }
   },
   "scripts": {
-    "precommit": "npm run test",
-    "commitmsg": "validate-commit-msg",
-    "lint": "eslint .",
-    "test": "npm run lint && mocha test",
-    "start": "node ./src/print-cli.js"
+    "precommit": "npm test",
+    "commitmsg": "./node_modules/.bin/validate-commit-msg",
+    "lint": "./node_modules/.bin/eslint .",
+    "clean": "./node_modules/.bin/rimraf ./bin/print-cli",
+    "uglify": "./node_modules/.bin/uglifyjs ./lib/print-cli.js -c -m --warn -o ./bin/print-cli",
+    "test-unit": "./node_modules/.bin/mocha test",
+    "build": "npm run lint && npm run clean && npm run uglify",
+    "prepublishOnly": "npm test",
+    "help": "npm test && node ./bin/print-cli --help",
+    "test": "npm run build && npm run test-unit",
+    "start": "npm test && node ./bin/print-cli --banner \"PRINT-CLI\""
   },
   "dependencies": {
     "colors": "^1.1.2",
@@ -61,6 +65,8 @@
     "husky": "^0.14.3",
     "mocha": "^3.5.0",
     "path": "^0.12.7",
+    "rimraf": "^2.6.1",
+    "uglify-js": "^3.0.28",
     "validate-commit-message": "^3.0.1"
   }
 }
