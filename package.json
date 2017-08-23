@@ -43,7 +43,6 @@
   "scripts": {
     "check-versions": "./node_modules/.bin/check-node-version --node \">= 6.9.5\" --npm \"5.2.0\" ",
     "print-banner": "./bin/print-cli -b -font standard -c green \"print-cli\"",
-    "postinstall": "npm run check-versions && npm run print-banner",
     "precommit": "npm test",
     "commitmsg": "./node_modules/.bin/validate-commit-msg",
     "lint": "./node_modules/.bin/eslint .",
