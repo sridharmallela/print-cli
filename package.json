@@ -1,6 +1,6 @@
 {
   "name": "print-cli",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "print command line interface",
   "main": "./bin/print-cli.js",
   "directories": {
@@ -41,16 +41,19 @@
     }
   },
   "scripts": {
+    "check-versions": "./node_modules/.bin/check-node-version --node \">= 6.9.5\" --npm \"5.2.0\" ",
+    "print-banner": "./bin/print-cli -b -font standard -c green \"print-cli\"",
+    "postinstall": "npm run check-versions && npm run print-banner",
     "precommit": "npm test",
     "commitmsg": "./node_modules/.bin/validate-commit-msg",
     "lint": "./node_modules/.bin/eslint .",
     "clean": "./node_modules/.bin/rimraf ./bin/print-cli",
     "uglify": "./node_modules/.bin/uglifyjs ./lib/print-cli.js -c -m --warn -o ./bin/print-cli",
     "test-unit": "./node_modules/.bin/mocha test",
-    "build": "npm run lint && npm run clean && npm run uglify",
+    "build": "npm run check-versions && npm run lint && npm run clean && npm run uglify",
+    "test": "npm run build && npm run test-unit",
     "prepublishOnly": "npm test",
     "help": "npm test && node ./bin/print-cli --help",
-    "test": "npm run build && npm run test-unit",
     "start": "npm test && node ./bin/print-cli --banner \"PRINT-CLI\""
   },
   "dependencies": {
@@ -60,6 +63,7 @@
   },
   "devDependencies": {
     "chai": "^4.1.1",
+    "check-node-version": "^2.1.0",
     "child_process": "^1.0.2",
     "eslint": "^4.5.0",
     "husky": "^0.14.3",
