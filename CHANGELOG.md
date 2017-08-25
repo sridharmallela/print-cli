@@ -1,5 +1,13 @@
 # PRINT CLI -- CHANGE LOG
 
+<a name="1.3.2"></a>
+## [1.3.2](https://github.com/sridharmallela/print-cli/compare/v1.3.1...v1.3.2) (2017-08-25)
+
+
+### Bug Fixes
+
+* **print-cli:** Fixed an issue with linux not able to ignore case of user input for font. ([ba30398](https://github.com/sridharmallela/print-cli/commit/ba30398))
+
 <a name="1.3.1"></a>
 ## 1.3.1 (2017-08-25)
 

@@ -197,12 +197,6 @@ $ npm test
 ```
 
 
-<a id="markdown-contributors" name="contributors"></a>
-## Contributors
-
-
-
-
 <a id="markdown-license" name="license"></a>
 ## License
 
