@@ -2,18 +2,23 @@ language: node_js
 
 node_js:
     - "node"
-    - "7"
-    - "6"
-    - "5"
     - "4"
+
+os:
+    - linux
+    - osx
 
 env:
     - NODE_ENV=TEST
+
+before_install:
+    - npm run print-banner
 
 install:
     - npm install
 
 script:
+    - npm run print-banner
     - npm test
 
 notifications:
