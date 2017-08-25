@@ -11,9 +11,6 @@ os:
 env:
     - NODE_ENV=TEST
 
-before_install:
-    - npm run print-banner
-
 install:
     - npm install
 
