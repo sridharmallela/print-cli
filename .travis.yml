@@ -15,7 +15,7 @@ install:
 
 script:
     - ls -ltr ./bin
-    - npm run print-banner
+    - npm run print-banner --verbose
     - npm test
 
 notifications:
