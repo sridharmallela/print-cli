@@ -1,5 +1,6 @@
-<a id="markdown-print-cli" name="print-cli"></a>
-# Print CLI
+<!-- TOC withLinks=false -->
+# Print CLI [![Build Status](https://travis-ci.org/sridharmallela/print-cli.svg?branch=master)](https://travis-ci.org/sridharmallela/print-cli)
+<!-- /TOC -->
 
 Generate a printable representation of ASCII text. Thanks to [Figlet](https://www.npmjs.com/package/figlet). Try it [here](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
 

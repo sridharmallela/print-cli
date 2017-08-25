@@ -6,7 +6,6 @@ node_js:
 
 os:
     - linux
-    - osx
 
 env:
     - NODE_ENV=TEST
@@ -15,6 +14,9 @@ install:
     - npm install
 
 script:
+    - pwd
+    - whoami
+    - ls -ltr ./node_modules/.bin
     - npm run print-banner
     - npm test
 
