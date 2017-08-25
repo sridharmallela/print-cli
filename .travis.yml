@@ -14,9 +14,7 @@ install:
     - npm install
 
 script:
-    - pwd
-    - whoami
-    - ls -ltr ./node_modules/.bin
+    - ls -ltr ./bin
     - npm run print-banner
     - npm test
 
