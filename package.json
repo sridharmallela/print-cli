@@ -1,6 +1,6 @@
 {
   "name": "print-cli",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "print command line interface",
   "main": "./bin/print-cli.js",
   "directories": {
@@ -41,7 +41,7 @@
     }
   },
   "scripts": {
-    "check-versions": "./node_modules/.bin/check-node-version --node \">= 6.9.5\" --npm \"5.2.0\" ",
+    "check-versions": "./node_modules/.bin/check-node-version --node \">= 4.0.0\" --npm \">=2.0.0\" ",
     "print-banner": "./bin/print-cli -b -font standard -c green \"print-cli\"",
     "commitmsg": "./node_modules/.bin/validate-commit-msg",
     "lint": "./node_modules/.bin/eslint .",

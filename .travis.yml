@@ -1,0 +1,21 @@
+language: node_js
+
+node_js:
+    - "node"
+    - "7"
+    - "6"
+    - "5"
+    - "4"
+
+env:
+    - NODE_ENV=TEST
+
+install:
+    - npm install
+
+script:
+    - npm test
+
+notifications:
+    email: "smallela.projworks@gmail.com"
+
