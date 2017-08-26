@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/sridharmallela/print-cli.git"
   },
+  "bugs": {
+    "url": "https://github.com/sridharmallela/print-cli/issues"
+  },
   "keywords": [
     "Print",
     "CLI"
@@ -19,10 +22,7 @@
   },
   "author": "Sridhar Mallela",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sridharmallela/print-cli/issues"
-  },
-  "homepage": "https://github.com/sridharmallela/print-cli#readme",
+  "homepage": "https://sridharmallela.github.io/print-cli/",
   "config": {
     "unsafe-perm": true,
     "validate-commit-msg": {
@@ -46,7 +46,7 @@
     "commitmsg": "./node_modules/.bin/validate-commit-msg",
     "clean": "./node_modules/.bin/rimraf coverage",
     "lint": "./node_modules/.bin/eslint .",
-    "uglify": "./node_modules/.bin/uglifyjs ./lib/print-cli.js -c -m --warn -o ./bin/print-cli",
+    "uglify": "./node_modules/.bin/uglifyjs ./lib/*.js -c -m --warn -o ./bin/print-cli",
     "test-unit": "./node_modules/.bin/nyc --reporter=text --reporter=lcov mocha test",
     "build": "npm run check-versions && npm run lint && npm run uglify",
     "pretest": "npm run build && npm run clean",
@@ -71,6 +71,7 @@
     "nyc": "^11.1.0",
     "path": "^0.12.7",
     "rimraf": "^2.6.1",
+    "sinon": "^3.2.1",
     "uglify-js": "^3.0.28",
     "validate-commit-message": "^3.0.1"
   }

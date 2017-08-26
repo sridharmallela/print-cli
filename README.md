@@ -1,4 +1,5 @@
 <!-- TOC withLinks=false -->
+<a id="markdown-print-cli" name="print-cli"></a>
 # Print CLI [![Build Status](https://travis-ci.org/sridharmallela/print-cli.svg?branch=master)](https://travis-ci.org/sridharmallela/print-cli)
 <!-- /TOC -->
 
@@ -14,9 +15,14 @@ Generate a printable representation of ASCII text. Thanks to [Figlet](https://ww
     - [Installation](#installation)
     - [Usage](#usage)
     - [Options](#options)
+        - [version (--version)](#version---version)
+        - [help (-h|--help)](#help--h--help)
+        - [enableBanner (-b|--banner)](#enablebanner--b--banner)
+        - [font (-f|--font)](#font--f--font)
+        - [color (-c|--color)](#color--c--color)
+        - [background color (--bg-color)](#background-color---bg-color)
     - [Updating print-cli](#updating-print-cli)
     - [Test](#test)
-    - [Contributors](#contributors)
     - [License](#license)
 
 <!-- /TOC -->
@@ -48,14 +54,20 @@ $ print-cli --banner "Hello World"
 <a id="markdown-options" name="options"></a>
 ## Options
 
-* version (--version) -- specifies the version of print-cli installed
+<a id="markdown-version---version" name="version---version"></a>
+### version (--version) 
+
+specifies the version of print-cli installed
 
 ```bash
 $ print-cli --version
 1.1.0
 ```
 
-* help (-h|--help) -- specifies how to use print-cli
+<a id="markdown-help--h--help" name="help--h--help"></a>
+### help (-h|--help) 
+
+specifies how to use print-cli
 
 ```bash 
 $ print-cli --help
@@ -79,21 +91,26 @@ $ print-cli -h
 
 ```
 
-* enableBanner (-b|--banner) -- specifies to enable ASCII banner
+<a id="markdown-enablebanner--b--banner" name="enablebanner--b--banner"></a>
+### enableBanner (-b|--banner) 
+
+specifies to enable ASCII banner
 
 ```bash 
-$ print-cli --banner "PRINT-CLI"
 $ print-cli -b "PRINT-CLI"
 
-    ____   ____   ____ _   __ ______      ______ __     ____
-   / __ \ / __ \ /  _// | / //_  __/     / ____// /    /  _/
-  / /_/ // /_/ / / / /  |/ /  / /______ / /    / /     / /  
- / ____// _, _/_/ / / /|  /  / //_____// /___ / /___ _/ /   
-/_/    /_/ |_|/___//_/ |_/  /_/        \____//_____//___/   
-                                                            
+  ____   ____   ___  _   _  _____        ____  _      ___ 
+ |  _ \ |  _ \ |_ _|| \ | ||_   _|      / ___|| |    |_ _|
+ | |_) || |_) | | | |  \| |  | | _____ | |    | |     | | 
+ |  __/ |  _ <  | | | |\  |  | ||_____|| |___ | |___  | | 
+ |_|    |_| \_\|___||_| \_|  |_|        \____||_____||___|
+                                                          
 ```
 
-* font (-f|--font) -- specifies font used to print the banner
+<a id="markdown-font--f--font" name="font--f--font"></a>
+### font (-f|--font) 
+
+specifies font used to print the banner
     - standard 
     - doom 
     - slant (default)
@@ -151,8 +168,12 @@ $ print-cli -b -f chunky "PRINT-CLI"
                                                                             
 ```
 
-* color (-c|--color) --  specifies color of the text being printed
+<a id="markdown-color--c--color" name="color--c--color"></a>
+### color (-c|--color) 
+
+specifies color of the text being printed
     - blue|black|cyan|green|grey|magenta|red|white|yellow
+
 ```bash
 $ print-cli -b -c green "PRINT-CLI"
 
@@ -164,8 +185,12 @@ $ print-cli -b -c green "PRINT-CLI"
                                                             
 ```
 
-* background color (--bg-color) -- specifies background color of the printed text
+<a id="markdown-background-color---bg-color" name="background-color---bg-color"></a>
+### background color (--bg-color) 
+
+specifies background color of the printed text
     - bgBlack|bgBlue|bgCyan|bgGreen|bgMagenta|bgRed|bgWhite|bgYellow
+
 ```bash
 $ print-cli -b --bg-color bgGreen "PRINT-CLI"
 
@@ -183,9 +208,9 @@ $ print-cli -b --bg-color bgGreen "PRINT-CLI"
 
 Global package:
 ```bash
-$ npm uninstall -g print-cli
-$ npm cache clean
-$ npm install -g print-cli@latest
+    $ npm uninstall -g print-cli
+    $ npm cache clean
+    $ npm install -g print-cli@latest
 ```
 
 
@@ -193,7 +218,7 @@ $ npm install -g print-cli@latest
 ## Test
 
 ```bash
-$ npm test
+    $ npm test
 ```
 
 

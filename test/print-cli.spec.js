@@ -2,14 +2,16 @@
 
 const spawn = require("child_process").spawn,
     expect = require("chai").expect,
+    sinon = require('sinon'),
     version = require('./../package.json').version,
     EXEC_PATH = require('path').resolve(`${__dirname}/../lib/print-cli`),
+    TEST_DATA_EXP = 'TEST DATA',
     TEST_DATA_RES = '\n  _____  _____  ____  _____   ____     _   _____   _    \n |_   _|| ____|/ ___||_   _| |  _ \\   / \\ |_   _| / \\   \n   | |  |  _|  \\___ \\  | |   | | | | / _ \\  | |  / _ \\  \n   | |  | |___  ___) | | |   | |_| |/ ___ \\ | | / ___ \\ \n   |_|  |_____||____/  |_|   |____//_/   \\_\\|_|/_/   \\_\\\n                                                        \n',
     TEST_HELP_RES = '\n  Usage: print-cli [options] [text]\n\n\n  Options:\n\n        --version           output the version number\n    -b  --banner            print banner in ASCII style\n    -f  --font [value]      font used to print text [standard|doom|slant|bell|chunky]\n    -c  --color [value]     color of the printed text [blue|black|cyan|green|grey|magenta|red|white|yellow]\n        --bg-color [value]  background color of the printed text [bgBlack|bgBlue|bgCyan|bgGreen|bgMagenta|bgRed|bgWhite|bgYellow]\n    -h, --help              output usage information\n\n  Examples:\n\n    $ print-cli --color red "print banner"\n    $ print-cli --help\n\n';
 
 describe('lib/print-cli --- ', () => {
 
-    describe('default options --- ', () => {
+    describe('default options as executable --- ', () => {
 
         it('test print help "--help"', (done) => {
             runPrintCommand(['--help'], (err, stdout) => {
@@ -77,10 +79,10 @@ describe('lib/print-cli --- ', () => {
         });
     });
 
-    describe('banner --- ', () => {
+    describe('banner as executable --- ', () => {
 
         it('test print "TEST DATA" with no options', (done) => {
-            runPrintCommand(['--banner', 'TEST DATA'], (err, stdout) => {
+            runPrintCommand(['--banner', TEST_DATA_EXP], (err, stdout) => {
                 expect(err).to.be.eql(null);
                 expect(stdout).not.to.be.empty;
                 expect(stdout).not.to.be.undefined;
@@ -90,7 +92,7 @@ describe('lib/print-cli --- ', () => {
         });
 
         it('test print "TEST DATA" with font slant "--font slant"', (done) => {
-            runPrintCommand(['-b', 'TEST DATA', '-f slant'], (err, stdout) => {
+            runPrintCommand(['-b', TEST_DATA_EXP, '-f slant'], (err, stdout) => {
                 expect(err).to.be.eql(null);
                 expect(stdout).not.to.be.empty;
                 expect(stdout).not.to.be.undefined;
@@ -100,7 +102,7 @@ describe('lib/print-cli --- ', () => {
         });
 
         it('test print "TEST DATA" with color blue "--color blue"', (done) => {
-            runPrintCommand(['-b', 'TEST DATA', '--color blue'], (err, stdout) => {
+            runPrintCommand(['-b', TEST_DATA_EXP, '--color blue'], (err, stdout) => {
                 expect(err).to.be.eql(null);
                 expect(stdout).not.to.be.empty;
                 expect(stdout).not.to.be.undefined;
@@ -110,7 +112,7 @@ describe('lib/print-cli --- ', () => {
         });
 
         it('test print "TEST DATA" with background color blue "--bgColor bgBlue"', (done) => {
-            runPrintCommand(['-b', 'TEST DATA', '--bgColor bgBlue'], (err, stdout) => {
+            runPrintCommand(['-b', TEST_DATA_EXP, '--bgColor bgBlue'], (err, stdout) => {
                 expect(err).to.be.eql(null);
                 expect(stdout).not.to.be.empty;
                 expect(stdout).not.to.be.undefined;
@@ -120,7 +122,7 @@ describe('lib/print-cli --- ', () => {
         });
 
         it('test print "TEST DATA" with color and background color', (done) => {
-            runPrintCommand(['--banner', 'TEST DATA', '--color blue', '--bgColor blue'], (err, stdout) => {
+            runPrintCommand(['--banner', TEST_DATA_EXP, '--color blue', '--bgColor blue'], (err, stdout) => {
                 expect(err).to.be.eql(null);
                 expect(stdout).not.to.be.empty;
                 expect(stdout).not.to.be.undefined;
@@ -137,6 +139,36 @@ describe('lib/print-cli --- ', () => {
                 expect(stdout).to.contain(TEST_HELP_RES);
                 done();
             });
+        });
+    });
+
+    describe('non banner as executable --- ', () => {
+
+        it('test print "TEST DATA"', (done) => {
+            runPrintCommand([TEST_DATA_EXP], (err, stdout) => {
+                expect(err).to.be.eql(null);
+                expect(stdout).not.to.be.empty;
+                expect(stdout).not.to.be.undefined;
+                expect(stdout).to.contain(TEST_DATA_EXP);
+                done();
+            });
+        });
+    });
+
+    describe('banner as function --- ', () => {
+
+        beforeEach(function () {
+            sinon.spy(console, 'log');
+        });
+
+        afterEach(function () {
+            console.log.restore();
+        });
+
+        it('test print "TEST DATA"', () => {
+            expect(console.log).not.to.be.called;
+            // print(TEST_DATA_EXP);
+            // expect(console.log).to.be.called;
         });
     });
 });
