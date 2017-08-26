@@ -44,15 +44,17 @@
     "check-versions": "./node_modules/.bin/check-node-version --node \">= 4.0.0\" --npm \">=2.0.0\" ",
     "print-banner": "./bin/print-cli -b -font standard -c green \"print-cli\"",
     "commitmsg": "./node_modules/.bin/validate-commit-msg",
+    "clean": "./node_modules/.bin/rimraf coverage",
     "lint": "./node_modules/.bin/eslint .",
     "uglify": "./node_modules/.bin/uglifyjs ./lib/print-cli.js -c -m --warn -o ./bin/print-cli",
-    "test-unit": "./node_modules/.bin/mocha test",
+    "test-unit": "./node_modules/.bin/nyc --reporter=text --reporter=lcov mocha test",
     "build": "npm run check-versions && npm run lint && npm run uglify",
-    "test": "npm run build && npm run test-unit && npm run print-banner",
+    "pretest": "npm run build && npm run clean",
+    "test": "npm run pretest && npm run test-unit && npm run print-banner",
     "precommit": "npm test",
     "preversion": "npm test",
     "prepublishOnly": "npm test",
-    "help": "npm run build && npm run test-unit && node ./bin/print-cli --help"
+    "help": "npm run pretest && npm run test-unit && node ./bin/print-cli --help"
   },
   "dependencies": {
     "colors": "^1.1.2",
@@ -66,7 +68,9 @@
     "eslint": "^4.5.0",
     "husky": "^0.14.3",
     "mocha": "^3.5.0",
+    "nyc": "^11.1.0",
     "path": "^0.12.7",
+    "rimraf": "^2.6.1",
     "uglify-js": "^3.0.28",
     "validate-commit-message": "^3.0.1"
   }

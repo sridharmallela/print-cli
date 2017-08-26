@@ -31,3 +31,7 @@ _config.yml
 .gitignore
 .npmrc
 .vcmrc
+.travis.yml
+CHANGELOG.md
+README.md
+.nyc_output
