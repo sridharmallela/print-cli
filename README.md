@@ -13,16 +13,17 @@ Generate a printable representation of ASCII text. Thanks to [Figlet](https://ww
 - [Print CLI](#print-cli)
     - [Table of Contents](#table-of-contents)
     - [Installation](#installation)
+        - [Global CLI](#global-cli)
+        - [Non CLI](#non-cli)
     - [Usage](#usage)
-    - [Options](#options)
-        - [version (--version)](#version---version)
-        - [help (-h|--help)](#help--h--help)
-        - [enableBanner (-b|--banner)](#enablebanner--b--banner)
-        - [font (-f|--font)](#font--f--font)
-        - [color (-c|--color)](#color--c--color)
-        - [background color (--bg-color)](#background-color---bg-color)
+        - [Non CLI](#non-cli-1)
+        - [Options](#options)
+            - [help (-h|--help)](#help--h--help)
+            - [enableBanner (-b|--banner)](#enablebanner--b--banner)
+            - [font (-f|--font)](#font--f--font)
+            - [color (-c|--color)](#color--c--color)
+            - [background color (--bg-color)](#background-color---bg-color)
     - [Updating print-cli](#updating-print-cli)
-    - [Test](#test)
     - [License](#license)
 
 <!-- /TOC -->
@@ -31,8 +32,19 @@ Generate a printable representation of ASCII text. Thanks to [Figlet](https://ww
 <a id="markdown-installation" name="installation"></a>
 ## Installation
 
+<a id="markdown-global-cli" name="global-cli"></a>
+### Global CLI
+
 ```bash
-$ npm install -g print-cli
+    $ npm install -g print-cli
+```
+
+
+<a id="markdown-non-cli" name="non-cli"></a>
+### Non CLI
+
+```bash
+    $ npm install --save print-cli
 ```
 
 
@@ -51,21 +63,30 @@ $ print-cli --banner "Hello World"
 ```
 
 
-<a id="markdown-options" name="options"></a>
-## Options
+<a id="markdown-non-cli-1" name="non-cli-1"></a>
+### Non CLI
 
-<a id="markdown-version---version" name="version---version"></a>
-### version (--version) 
+```js
 
-specifies the version of print-cli installed
+var print = require(print-cli);
 
-```bash
-$ print-cli --version
-1.1.0
+print.PRINT({
+    text: '',
+    isBanner: true|false,
+    font: 'standard|doom|slant|bell|chunky',
+    color: 'blue|black|cyan|green|grey|magenta|red|white|yellow',
+    bgColor: 'bgBlack|bgBlue|bgCyan|bgGreen|bgMagenta|bgRed|bgWhite|bgYellow'
+});
+
 ```
 
+
+<a id="markdown-options" name="options"></a>
+### Options
+
+
 <a id="markdown-help--h--help" name="help--h--help"></a>
-### help (-h|--help) 
+#### help (-h|--help) 
 
 specifies how to use print-cli
 
@@ -91,8 +112,9 @@ $ print-cli -h
 
 ```
 
+
 <a id="markdown-enablebanner--b--banner" name="enablebanner--b--banner"></a>
-### enableBanner (-b|--banner) 
+#### enableBanner (-b|--banner) 
 
 specifies to enable ASCII banner
 
@@ -107,8 +129,9 @@ $ print-cli -b "PRINT-CLI"
                                                           
 ```
 
+
 <a id="markdown-font--f--font" name="font--f--font"></a>
-### font (-f|--font) 
+#### font (-f|--font) 
 
 specifies font used to print the banner
     - standard 
@@ -168,8 +191,9 @@ $ print-cli -b -f chunky "PRINT-CLI"
                                                                             
 ```
 
+
 <a id="markdown-color--c--color" name="color--c--color"></a>
-### color (-c|--color) 
+#### color (-c|--color) 
 
 specifies color of the text being printed
     - blue|black|cyan|green|grey|magenta|red|white|yellow
@@ -185,8 +209,9 @@ $ print-cli -b -c green "PRINT-CLI"
                                                             
 ```
 
+
 <a id="markdown-background-color---bg-color" name="background-color---bg-color"></a>
-### background color (--bg-color) 
+#### background color (--bg-color) 
 
 specifies background color of the printed text
     - bgBlack|bgBlue|bgCyan|bgGreen|bgMagenta|bgRed|bgWhite|bgYellow
@@ -211,14 +236,6 @@ Global package:
     $ npm uninstall -g print-cli
     $ npm cache clean
     $ npm install -g print-cli@latest
-```
-
-
-<a id="markdown-test" name="test"></a>
-## Test
-
-```bash
-    $ npm test
 ```
 
 

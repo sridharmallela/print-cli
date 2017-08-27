@@ -1,4 +1,9 @@
-# PRINT CLI -- CHANGE LOG
+<a name="1.4.1"></a>
+## [1.4.1](https://github.com/sridharmallela/print-cli/compare/v1.4.0...v1.4.1) (2017-08-27)
+
+### Features
+
+* Added a new feature way of printing banner
 
 <a name="1.3.2"></a>
 ## [1.3.2](https://github.com/sridharmallela/print-cli/compare/v1.3.1...v1.3.2) (2017-08-25)

@@ -1,11 +1,11 @@
 {
   "name": "print-cli",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "print command line interface",
-  "main": "./bin/print-cli.js",
-  "directories": {
-    "bin": "bin"
-  },
+  "main": "./bin/print.js",
+  "author": "Sridhar Mallela",
+  "license": "MIT",
+  "homepage": "https://sridharmallela.github.io/print-cli/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sridharmallela/print-cli.git"
@@ -17,12 +17,17 @@
     "Print",
     "CLI"
   ],
+  "directories": {
+    "bin": "bin"
+  },
+  "files": [
+    "bin/print-cli",
+    "bin/print.js",
+    "README.md"
+  ],
   "bin": {
     "print-cli": "./bin/print-cli"
   },
-  "author": "Sridhar Mallela",
-  "license": "MIT",
-  "homepage": "https://sridharmallela.github.io/print-cli/",
   "config": {
     "unsafe-perm": true,
     "validate-commit-msg": {
@@ -44,7 +49,7 @@
     "check-versions": "./node_modules/.bin/check-node-version --node \">= 4.0.0\" --npm \">=2.0.0\" ",
     "print-banner": "./bin/print-cli -b -font standard -c green \"print-cli\"",
     "commitmsg": "./node_modules/.bin/validate-commit-msg",
-    "clean": "./node_modules/.bin/rimraf coverage",
+    "clean": "./node_modules/.bin/rimraf coverage .nyc_output",
     "lint": "./node_modules/.bin/eslint .",
     "uglify-src": "./node_modules/.bin/uglifyjs ./lib/print.js -c -m --warn -o ./bin/print.js",
     "uglify-cli": "./node_modules/.bin/uglifyjs ./lib/cli.js -c -m --warn -o ./bin/print-cli",
