@@ -1,6 +1,6 @@
 {
   "name": "print-cli",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "print command line interface",
   "main": "./bin/print.js",
   "author": "Sridhar Mallela",
@@ -46,7 +46,7 @@
     }
   },
   "scripts": {
-    "check-versions": "./node_modules/.bin/check-node-version --node \">= 4.0.0\" --npm \">=2.0.0\" ",
+    "check-versions": "./node_modules/.bin/versions-checker --node \">= 4.0.0\" --npm \">=2.0.0\" ",
     "print-banner": "./bin/print-cli -b -font standard -c green \"print-cli\"",
     "commitmsg": "./node_modules/.bin/validate-commit-msg",
     "clean": "./node_modules/.bin/rimraf coverage .nyc_output",
@@ -69,7 +69,6 @@
   },
   "devDependencies": {
     "chai": "^4.1.1",
-    "check-node-version": "^2.1.0",
     "child_process": "^1.0.2",
     "eslint": "^4.5.0",
     "husky": "^0.14.3",
@@ -79,6 +78,7 @@
     "rimraf": "^2.6.1",
     "sinon": "^3.2.1",
     "uglify-js": "^3.0.28",
-    "validate-commit-message": "^3.0.1"
+    "validate-commit-message": "^3.0.1",
+    "versions-checker": "^0.2.0"
   }
 }
