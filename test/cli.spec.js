@@ -2,7 +2,6 @@
 
 const spawn = require("child_process").spawn,
     expect = require("chai").expect,
-    // sinon = require('sinon'),
     version = require('./../package.json').version,
     EXEC_PATH = require('path').resolve(`${__dirname}/../lib/cli`),
     TEST_DATA_EXP = 'TEST DATA',
@@ -155,22 +154,6 @@ describe('lib/cli --- ', () => {
             });
         });
     });
-    // describe('banner as function --- ', () => {
-
-    //     beforeEach(function () {
-    //         sinon.spy(console, 'log');
-    //     });
-
-    //     afterEach(function () {
-    //         console.log.restore();
-    //     });
-
-    //     it('test print "TEST DATA"', () => {
-    //         expect(console.log).not.to.be.called;
-    //         // print(TEST_DATA_EXP);
-    //         // expect(console.log).to.be.called;
-    //     });
-    // });
 });
 
 function runPrintCommand(args, callback) {
@@ -205,8 +188,6 @@ function runRawCommand(args, callback) {
 
     child.on('close', onclose);
     child.on('error', callback);
-
-    // child.kill('SIGINT');
 
     function onclose(code) {
         callback(null, stdout, code, stderr);
