@@ -1,9 +1,13 @@
 <a id="markdown-print-cli" name="print-cli"></a>
 # Print CLI
 
- [![Build Status](https://travis-ci.org/sridharmallela/print-cli.svg?branch=master)](https://travis-ci.org/sridharmallela/print-cli) [![GitHub issues](https://img.shields.io/github/issues/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/issues) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/print-cli/master/LICENSE)
+ [![Build Status](https://travis-ci.org/sridharmallela/print-cli.svg?branch=master)](https://travis-ci.org/sridharmallela/print-cli) 
+ [![GitHub issues](https://img.shields.io/github/issues/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/issues) 
+ [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/print-cli/master/LICENSE)
 
 Generate a printable representation of ASCII text. Thanks to [Figlet](https://www.npmjs.com/package/figlet). Try it [here](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
+
+![intro](assets/intro.gif)
 
 
 <a id="markdown-table-of-contents" name="table-of-contents"></a>
@@ -17,6 +21,7 @@ Generate a printable representation of ASCII text. Thanks to [Figlet](https://ww
         - [Non CLI](#non-cli)
     - [Usage](#usage)
         - [Non CLI](#non-cli-1)
+        - [NPM Script](#npm-script)
         - [Options](#options)
             - [help (-h|--help)](#help--h--help)
             - [enableBanner (-b|--banner)](#enablebanner--b--banner)
@@ -52,14 +57,13 @@ Generate a printable representation of ASCII text. Thanks to [Figlet](https://ww
 ## Usage
 
 ```bash 
-$ print-cli --banner "Hello World"
-
+$ print-cli --banner --font slant "Hello World"
        __  __       __ __          _       __              __     __
       / / / /___   / // /____     | |     / /____   _____ / /____/ /
      / /_/ // _ \ / // // __ \    | | /| / // __ \ / ___// // __  / 
     / __  //  __// // // /_/ /    | |/ |/ // /_/ // /   / // /_/ /  
-   /_/ /_/ \___//_//_/ \____/     |__/|__/ \____//_/   /_/ \__,_/   
-                                                                    
+   /_/ /_/ \___//_//_/ \____/     |__/|__/ \____//_/   /_/ \__,_/       
+                   
 ```
 
 
@@ -67,16 +71,41 @@ $ print-cli --banner "Hello World"
 ### Non CLI
 
 ```js
+    var print = require(print-cli);
 
-var print = require(print-cli);
+    print.PRINT({
+        text: '',
+        isBanner: true|false,
+        font: 'standard|doom|slant|bell|chunky',
+        color: 'blue|black|cyan|green|grey|magenta|red|white|yellow',
+        bgColor: 'bgBlack|bgBlue|bgCyan|bgGreen|bgMagenta|bgRed|bgWhite|bgYellow'
+    });
+```
 
-print.PRINT({
-    text: '',
-    isBanner: true|false,
-    font: 'standard|doom|slant|bell|chunky',
-    color: 'blue|black|cyan|green|grey|magenta|red|white|yellow',
-    bgColor: 'bgBlack|bgBlue|bgCyan|bgGreen|bgMagenta|bgRed|bgWhite|bgYellow'
-});
+
+<a id="markdown-npm-script" name="npm-script"></a>
+### NPM Script
+
+```json
+// package.json
+{
+    "scripts": {
+        "print-banner": "./bin/print-cli -b -font standard -c green \"print-cli\""
+    }
+}
+```
+
+```bash 
+$ npm run print-banner
+
+> print-cli@1.4.4 print-banner /Users/a565550/git/print-cli
+> ./bin/print-cli -b -font standard -c green "print-cli"
+               _         _                _  _ 
+  _ __   _ __ (_) _ __  | |_         ___ | |(_)
+ | '_ \ | '__|| || '_ \ | __|_____  / __|| || |
+ | |_) || |   | || | | || |_|_____|| (__ | || |
+ | .__/ |_|   |_||_| |_| \__|       \___||_||_|
+ |_|                                           
 
 ```
 
@@ -88,7 +117,7 @@ print.PRINT({
 <a id="markdown-help--h--help" name="help--h--help"></a>
 #### help (-h|--help) 
 
-specifies how to use print-cli
+* specifies how to use print-cli
 
 ```bash 
 $ print-cli --help
@@ -108,124 +137,60 @@ $ print-cli -h
   Examples:
 
     $ print-cli --color red "print banner"
-    $ print-cli --help                                                                  
-
+    $ print-cli --help         
 ```
 
 
 <a id="markdown-enablebanner--b--banner" name="enablebanner--b--banner"></a>
 #### enableBanner (-b|--banner) 
 
-specifies to enable ASCII banner
-
-```bash 
-$ print-cli -b "PRINT-CLI"
-
-  ____   ____   ___  _   _  _____        ____  _      ___ 
- |  _ \ |  _ \ |_ _|| \ | ||_   _|      / ___|| |    |_ _|
- | |_) || |_) | | | |  \| |  | | _____ | |    | |     | | 
- |  __/ |  _ <  | | | |\  |  | ||_____|| |___ | |___  | | 
- |_|    |_| \_\|___||_| \_|  |_|        \____||_____||___|
-                                                          
-```
+* specifies to enable ASCII banner
 
 
 <a id="markdown-font--f--font" name="font--f--font"></a>
 #### font (-f|--font) 
 
-specifies font used to print the banner
-    - standard 
+* specifies font used to print the banner
+    - standard (default)
     - doom 
-    - slant (default)
+    - slant 
     - bell 
     - chunky
 
-```bash 
-$ print-cli -b -f slant "PRINT-CLI"
-
-    ____   ____   ____ _   __ ______      ______ __     ____
-   / __ \ / __ \ /  _// | / //_  __/     / ____// /    /  _/
-  / /_/ // /_/ / / / /  |/ /  / /______ / /    / /     / /  
- / ____// _, _/_/ / / /|  /  / //_____// /___ / /___ _/ /   
-/_/    /_/ |_|/___//_/ |_/  /_/        \____//_____//___/   
-
-```
-```bash 
-$ print-cli -b -f standard "PRINT-CLI"
-
-  ____   ____   ___  _   _  _____        ____  _      ___ 
- |  _ \ |  _ \ |_ _|| \ | ||_   _|      / ___|| |    |_ _|
- | |_) || |_) | | | |  \| |  | | _____ | |    | |     | | 
- |  __/ |  _ <  | | | |\  |  | ||_____|| |___ | |___  | | 
- |_|    |_| \_\|___||_| \_|  |_|        \____||_____||___|
-                                                          
-```
-```bash 
-$ print-cli -b -f doom "PRINT-CLI"
-
-______ ______  _____  _   _  _____        _____  _     _____ 
-| ___ \| ___ \|_   _|| \ | ||_   _|      /  __ \| |   |_   _|
-| |_/ /| |_/ /  | |  |  \| |  | | ______ | /  \/| |     | |  
-|  __/ |    /   | |  | . ` |  | ||______|| |    | |     | |  
-| |    | |\ \  _| |_ | |\  |  | |        | \__/\| |_____| |_ 
-\_|    \_| \_| \___/ \_| \_/  \_/         \____/\_____/\___/ 
-                                                             
-```
-```bash                                                              
-$ print-cli -b -f bell "PRINT-CLI"
-
- .___  .___  _ __    _  _______         ___  .     _
- /   \ /   \ | |\   |  '   /          .'   \ /     |
- |,_-' |__-' | | \  |      |    .---' |      |     |
- |     |  \  | |  \ |      |          |      |     |
- /     /   \ / |   \|      /           `.__, /---/ /
-                                                    
-```
-```bash 
-$ print-cli -b -f chunky "PRINT-CLI"
-
- ______  ______  _______  _______  _______         ______  _____    _______ 
-|   __ \|   __ \|_     _||    |  ||_     _|______ |      ||     |_ |_     _|
-|    __/|      < _|   |_ |       |  |   | |______||   ---||       | _|   |_ 
-|___|   |___|__||_______||__|____|  |___|         |______||_______||_______|
-                                                                            
-```
+![Fonts-Usage](assets/fonts.gif)
 
 
 <a id="markdown-color--c--color" name="color--c--color"></a>
 #### color (-c|--color) 
 
-specifies color of the text being printed
-    - blue|black|cyan|green|grey|magenta|red|white|yellow
+* specifies color of the text being printed
+    - blue
+    - black 
+    - cyan
+    - green
+    - grey
+    - magenta
+    - red
+    - white
+    - yellow
 
-```bash
-$ print-cli -b -c green "PRINT-CLI"
-
-    ____   ____   ____ _   __ ______      ______ __     ____
-   / __ \ / __ \ /  _// | / //_  __/     / ____// /    /  _/
-  / /_/ // /_/ / / / /  |/ /  / /______ / /    / /     / /  
- / ____// _, _/_/ / / /|  /  / //_____// /___ / /___ _/ /   
-/_/    /_/ |_|/___//_/ |_/  /_/        \____//_____//___/   
-                                                            
-```
+![Colors-Usage](assets/colors.gif)
 
 
 <a id="markdown-background-color---bg-color" name="background-color---bg-color"></a>
 #### background color (--bg-color) 
 
-specifies background color of the printed text
-    - bgBlack|bgBlue|bgCyan|bgGreen|bgMagenta|bgRed|bgWhite|bgYellow
+* specifies background color of the printed text
+    - bgBlack
+    - bgBlue
+    - bgCyan
+    - bgGreen
+    - bgMagenta
+    - bgRed
+    - bgWhite
+    - bgYellow
 
-```bash
-$ print-cli -b --bg-color bgGreen "PRINT-CLI"
-
-    ____   ____   ____ _   __ ______      ______ __     ____
-   / __ \ / __ \ /  _// | / //_  __/     / ____// /    /  _/
-  / /_/ // /_/ / / / /  |/ /  / /______ / /    / /     / /  
- / ____// _, _/_/ / / /|  /  / //_____// /___ / /___ _/ /   
-/_/    /_/ |_|/___//_/ |_/  /_/        \____//_____//___/   
-                                                            
-```
+![Background-Colors-Usage](assets/bg-colors.gif)
 
 
 <a id="markdown-updating-print-cli" name="updating-print-cli"></a>
