@@ -7,7 +7,7 @@
 
 Generate a printable representation of ASCII text. Thanks to [Figlet](https://www.npmjs.com/package/figlet). Try it [here](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
 
-![intro](assets/intro.gif)
+![intro](https://github.com/sridharmallela/print-cli/blob/master/assets/intro.gif?raw=true)
 
 
 <a id="markdown-table-of-contents" name="table-of-contents"></a>
@@ -157,7 +157,7 @@ $ print-cli -h
     - bell 
     - chunky
 
-![Fonts-Usage](assets/fonts.gif)
+![Fonts-Usage](https://github.com/sridharmallela/print-cli/blob/master/assets/fonts.gif?raw=true)
 
 
 <a id="markdown-color--c--color" name="color--c--color"></a>
@@ -174,7 +174,7 @@ $ print-cli -h
     - white
     - yellow
 
-![Colors-Usage](assets/colors.gif)
+![Colors-Usage](https://github.com/sridharmallela/print-cli/blob/master/assets/colors.gif?raw=true)
 
 
 <a id="markdown-background-color---bg-color" name="background-color---bg-color"></a>
@@ -190,7 +190,7 @@ $ print-cli -h
     - bgWhite
     - bgYellow
 
-![Background-Colors-Usage](assets/bg-colors.gif)
+![Background-Colors-Usage](https://github.com/sridharmallela/print-cli/blob/master/assets/bg-colors.gif?raw=true)
 
 
 <a id="markdown-updating-print-cli" name="updating-print-cli"></a>
