@@ -121,23 +121,23 @@ $ npm run print-banner
 
 ```bash 
 $ print-cli --help
-$ print-cli -h
 
   Usage: print-cli [options] [text]
 
+
   Options:
 
-        --version          output the version number
-    -b  --banner           print banner in ASCII style
-    -f  --font [value]     font used to print text [standard|doom|slant|bell|chunky]
-    -c  --color [value]    color of the printed text [blue|black|cyan|green|grey|magenta|red|white|yellow]
-        --bg-color [value]  background color of the printed text [bgBlack|bgBlue|bgCyan|bgGreen|bgMagenta|bgRed|bgWhite|bgYellow]
-    -h, --help             output usage information
+        --version              output the version number
+    -b  --banner               print banner in ASCII style
+    -f  --font [font]          font used to print text [standard|doom|slant|bell|chunky]
+    -c  --color [color]        color of the printed text [blue|black|cyan|green|grey|magenta|red|white|yellow|rainbow|zebra|america]
+        --bg-color [bg color]  background color of the printed text [bgBlack|bgBlue|bgCyan|bgGreen|bgMagenta|bgRed|bgWhite|bgYellow]
+    -h, --help                 output usage information
 
   Examples:
 
     $ print-cli --color red "print banner"
-    $ print-cli --help         
+    $ print-cli --help
 ```
 
 
@@ -173,6 +173,9 @@ $ print-cli -h
     - red
     - white
     - yellow
+    - rainbow
+    - zebra 
+    - america
 
 ![Colors-Usage](https://github.com/sridharmallela/print-cli/blob/master/assets/colors.gif?raw=true)
 
