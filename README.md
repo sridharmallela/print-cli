@@ -1,13 +1,32 @@
 <a id="markdown-print-cli" name="print-cli"></a>
 # Print CLI
 
-[![Build Status](https://travis-ci.org/sridharmallela/print-cli.svg?branch=master)](https://travis-ci.org/sridharmallela/print-cli) 
+[![npm](https://img.shields.io/npm/v/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
+[![npm](https://img.shields.io/npm/dw/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
+[![npm](https://img.shields.io/npm/dm/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
+[![npm](https://img.shields.io/npm/dy/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
+[![npm](https://img.shields.io/npm/dt/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
+
+[![GitHub tag](https://img.shields.io/github/tag/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/tags)
+[![GitHub release](https://img.shields.io/github/release/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/releases)
 [![GitHub issues](https://img.shields.io/github/issues/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/issues) 
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/pulls)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/print-cli/master/LICENSE)
-[![Statement Coverage](https://img.shields.io/badge/Statements-89.74%-brightgreen.svg)](https://github.com/sridharmallela/print-cli/) 
-[![Branch Coverage](https://img.shields.io/badge/Branches-100%-brightgreen.svg)](https://github.com/sridharmallela/print-cli/)
-[![Function Coverage](https://img.shields.io/badge/Functions-85.71%-brightgreen.svg)](https://github.com/sridharmallela/print-cli/)
-[![Line Coverage](https://img.shields.io/badge/Lines-89.74%-brightgreen.svg)](https://github.com/sridharmallela/print-cli/)
+
+[![Build Status](https://img.shields.io/travis/sridharmallela/print-cli.svg?style=plastic)](https://travis-ci.org/sridharmallela/print-cli) 
+[![Statement Coverage](https://img.shields.io/badge/Statements-89.74%-brightgreen.svg?style=plastic)](https://github.com/sridharmallela/print-cli/) 
+[![Branch Coverage](https://img.shields.io/badge/Branches-100%-brightgreen.svg?style=plastic)](https://github.com/sridharmallela/print-cli/)
+[![Function Coverage](https://img.shields.io/badge/Functions-85.71%-brightgreen.svg?style=plastic)](https://github.com/sridharmallela/print-cli/)
+[![Line Coverage](https://img.shields.io/badge/Lines-89.74%-brightgreen.svg?style=plastic)](https://github.com/sridharmallela/print-cli/)
+
+[![node](https://img.shields.io/node/v/sridharmallela/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
+[![David](https://img.shields.io/david/sridharmallela/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
+[![David](https://img.shields.io/david/dev/sridharmallela/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
+[![David](https://img.shields.io/david/optional/sridharmallela/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
+
+[![GitHub forks](https://img.shields.io/github/forks/sridharmallela/print-cli.svg?style=social&label=Fork)](https://github.com/sridharmallela/print-cli/)
+[![GitHub stars](https://img.shields.io/github/stars/sridharmallela/print-cli.svg?style=social&label=Star)](https://github.com/sridharmallela/print-cli/)
+[![GitHub watchers](https://img.shields.io/github/watchers/sridharmallela/print-cli.svg?style=social&label=Watch)](https://github.com/sridharmallela/print-cli/)
 
 Generate a printable representation of ASCII text. Thanks to [Figlet](https://www.npmjs.com/package/figlet). Try it [here](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
 
