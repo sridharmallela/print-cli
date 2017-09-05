@@ -14,10 +14,7 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/print-cli/master/LICENSE)
 
 [![Build Status](https://img.shields.io/travis/sridharmallela/print-cli.svg?style=plastic)](https://travis-ci.org/sridharmallela/print-cli) 
-[![Statement Coverage](https://img.shields.io/badge/Statements-89.74%-brightgreen.svg?style=plastic)](https://github.com/sridharmallela/print-cli/) 
-[![Branch Coverage](https://img.shields.io/badge/Branches-100%-brightgreen.svg?style=plastic)](https://github.com/sridharmallela/print-cli/)
-[![Function Coverage](https://img.shields.io/badge/Functions-85.71%-brightgreen.svg?style=plastic)](https://github.com/sridharmallela/print-cli/)
-[![Line Coverage](https://img.shields.io/badge/Lines-89.74%-brightgreen.svg?style=plastic)](https://github.com/sridharmallela/print-cli/)
+[![codecov](https://codecov.io/gh/sridharmallela/print-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/sridharmallela/print-cli)
 
 [![node](https://img.shields.io/node/v/sridharmallela/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
 [![David](https://img.shields.io/david/sridharmallela/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
