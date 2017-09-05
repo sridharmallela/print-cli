@@ -1,5 +1,3 @@
-'use strict';
-
 const spawn = require("child_process").spawn,
     expect = require("chai").expect,
     version = require('./../package.json').version,

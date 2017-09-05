@@ -29,7 +29,6 @@ _config.yml
 .eslintignore
 .eslintrc
 .gitignore
-.npmrc
 .vcmrc
 .travis.yml
 CHANGELOG.md

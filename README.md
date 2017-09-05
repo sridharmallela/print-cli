@@ -4,6 +4,10 @@
  [![Build Status](https://travis-ci.org/sridharmallela/print-cli.svg?branch=master)](https://travis-ci.org/sridharmallela/print-cli) 
  [![GitHub issues](https://img.shields.io/github/issues/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/issues) 
  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/print-cli/master/LICENSE)
+ ![Statement Coverage](https://img.shields.io/badge/Statements-89.74%-brightgreen.svg "Statement Coverage")
+![Branch Coverage](https://img.shields.io/badge/Branches-100%-brightgreen.svg "Branch Coverage")
+![Function Coverage](https://img.shields.io/badge/Functions-85.71%-brightgreen.svg "Function Coverage")
+![Line Coverage](https://img.shields.io/badge/Lines-89.74%-brightgreen.svg "Line Coverage")
 
 Generate a printable representation of ASCII text. Thanks to [Figlet](https://www.npmjs.com/package/figlet). Try it [here](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
 
