@@ -1,6 +1,6 @@
 {
   "name": "print-cli",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "print command line interface",
   "main": "./bin/index.js",
   "author": "Sridhar Mallela",
@@ -100,6 +100,6 @@
     "sinon": "^3.2.1",
     "uglify-js": "^3.0.28",
     "validate-commit-message": "^3.0.1",
-    "versions-checker": "^0.2.0"
+    "versions-checker": "^1.1.0"
   }
 }
