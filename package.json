@@ -1,105 +1,106 @@
 {
-  "name": "print-cli",
-  "version": "1.5.1",
-  "description": "print command line interface",
-  "main": "./bin/index.js",
-  "author": "Sridhar Mallela",
-  "license": "MIT",
-  "homepage": "https://sridharmallela.github.io/print-cli/",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sridharmallela/print-cli.git"
-  },
-  "bugs": {
-    "url": "https://github.com/sridharmallela/print-cli/issues"
-  },
-  "keywords": [
-    "Print",
-    "CLI"
-  ],
-  "directories": {
-    "bin": "bin"
-  },
-  "files": [
-    "bin/print-cli",
-    "bin/index.js",
-    "bin/options.js",
-    "README.md"
-  ],
-  "bin": {
-    "print-cli": "./bin/print-cli"
-  },
-  "config": {
-    "unsafe-perm": true,
-    "validate-commit-msg": {
-      "types": [
-        "feat",
-        "fix",
-        "docs",
-        "style",
-        "refactor",
-        "test",
-        "chore"
-      ],
-      "warnOnFail": false,
-      "maxSubjectLength": 1500,
-      "helpMessage": "use karma style git commit pattern"
+    "name": "print-cli",
+    "version": "1.5.2",
+    "description": "print command line interface",
+    "main": "./bin/index.js",
+    "author": "Sridhar Mallela",
+    "license": "MIT",
+    "homepage": "https://sridharmallela.github.io/print-cli/",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sridharmallela/print-cli.git"
+    },
+    "bugs": {
+        "url": "https://github.com/sridharmallela/print-cli/issues"
+    },
+    "keywords": [
+        "Print",
+        "CLI"
+    ],
+    "directories": {
+        "bin": "bin"
+    },
+    "files": [
+        "bin/print-cli",
+        "bin/index.js",
+        "bin/options.js",
+        "README.md"
+    ],
+    "bin": {
+        "print-cli": "./bin/print-cli"
+    },
+    "config": {
+        "unsafe-perm": true,
+        "validate-commit-msg": {
+            "types": [
+                "feat",
+                "fix",
+                "docs",
+                "style",
+                "refactor",
+                "test",
+                "chore"
+            ],
+            "warnOnFail": false,
+            "maxSubjectLength": 1500,
+            "helpMessage": "use karma style git commit pattern"
+        }
+    },
+    "nyc": {
+        "extension": [
+            ".js"
+        ],
+        "exclude": [
+            "**/dist/*",
+            "**/bin/*",
+            "**/test/*",
+            "**/assets/*",
+            "**/coverage/*",
+            "**/*.spec.js"
+        ],
+        "reporter": [
+            "lcov",
+            "text"
+        ],
+        "all": true
+    },
+    "scripts": {
+        "check-versions": "./node_modules/.bin/versions-checker --node \">= 4.0.0\" --npm \">=2.0.0\" ",
+        "print-banner": "./bin/print-cli -b -c green \"print-cli\"",
+        "commitmsg": "./node_modules/.bin/validate-commit-msg",
+        "clean": "./node_modules/.bin/rimraf coverage .nyc_output",
+        "lint": "./node_modules/.bin/eslint .",
+        "uglify-src": "./node_modules/.bin/uglifyjs ./lib/index.js -c -m -o ./bin/index.js",
+        "uglify-opts": "./node_modules/.bin/uglifyjs ./lib/options.js -c -m -o ./bin/options.js",
+        "uglify-cli": "./node_modules/.bin/uglifyjs ./lib/cli.js -c -m -o ./bin/print-cli",
+        "uglify": "npm run uglify-src && npm run uglify-opts && npm run uglify-cli",
+        "build": "npm run check-versions && npm run lint && npm run uglify",
+        "test-unit": "./node_modules/.bin/nyc ./node_modules/.bin/mocha ./lib/*.spec.js",
+        "test": "npm run build && npm run clean && npm run test-unit && npm run print-banner",
+        "report-coverage": "./node_modules/.bin/nyc report --reporter=lcov > coverage.lcov && codecov",
+        "precommit": "npm test",
+        "preversion": "npm test",
+        "prepublishOnly": "npm test",
+        "help": "npm test && ./bin/print-cli --help"
+    },
+    "dependencies": {
+        "colors": "^1.1.2",
+        "commander": "^2.11.0",
+        "figlet": "^1.2.0",
+        "uglify-es": "^3.1.0"
+    },
+    "devDependencies": {
+        "chai": "^4.1.1",
+        "child_process": "^1.0.2",
+        "codecov": "^2.3.0",
+        "eslint": "^4.5.0",
+        "husky": "^0.14.3",
+        "mocha": "^3.5.3",
+        "nyc": "^11.1.0",
+        "path": "^0.12.7",
+        "rimraf": "^2.6.1",
+        "sinon": "^3.2.1",
+        "validate-commit-message": "^3.0.1",
+        "versions-checker": "^1.1.0"
     }
-  },
-  "nyc": {
-    "extension": [
-      ".js"
-    ],
-    "exclude": [
-      "**/dist/*",
-      "**/bin/*",
-      "**/test/*",
-      "**/assets/*",
-      "**/coverage/*"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ],
-    "all": true
-  },
-  "scripts": {
-    "check-versions": "./node_modules/.bin/versions-checker --node \">= 4.0.0\" --npm \">=2.0.0\" ",
-    "print-banner": "./bin/print-cli -b -font standard -c green \"print-cli\"",
-    "commitmsg": "./node_modules/.bin/validate-commit-msg",
-    "clean": "./node_modules/.bin/rimraf coverage .nyc_output",
-    "lint": "./node_modules/.bin/eslint .",
-    "uglify-src": "./node_modules/.bin/uglifyjs ./lib/index.js -c -m -o ./bin/index.js",
-    "uglify-opts": "./node_modules/.bin/uglifyjs ./lib/options.js -c -m -o ./bin/options.js",
-    "uglify-cli": "./node_modules/.bin/uglifyjs ./lib/cli.js -c -m -o ./bin/print-cli",
-    "test-unit": "./node_modules/.bin/nyc mocha test",
-    "uglify": "npm run uglify-src && npm run uglify-opts && npm run uglify-cli",
-    "build": "npm run check-versions && npm run lint && npm run uglify",
-    "test": "npm run build && npm run clean && npm run test-unit && npm run print-banner",
-    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
-    "precommit": "npm test",
-    "preversion": "npm test",
-    "prepublishOnly": "npm test",
-    "help": "npm test && ./bin/print-cli --help"
-  },
-  "dependencies": {
-    "colors": "^1.1.2",
-    "commander": "^2.11.0",
-    "figlet": "^1.2.0"
-  },
-  "devDependencies": {
-    "chai": "^4.1.1",
-    "child_process": "^1.0.2",
-    "codecov": "^2.3.0",
-    "eslint": "^4.5.0",
-    "husky": "^0.14.3",
-    "mocha": "^3.5.0",
-    "nyc": "^11.1.0",
-    "path": "^0.12.7",
-    "rimraf": "^2.6.1",
-    "sinon": "^3.2.1",
-    "uglify-js": "^3.0.28",
-    "validate-commit-message": "^3.0.1",
-    "versions-checker": "^1.1.0"
-  }
 }
