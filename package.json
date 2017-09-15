@@ -1,6 +1,6 @@
 {
     "name": "print-cli",
-    "version": "1.6.0",
+    "version": "1.6.1",
     "description": "print command line interface",
     "main": "./bin/index.js",
     "author": "Sridhar Mallela",
@@ -65,7 +65,7 @@
         "all": true
     },
     "scripts": {
-        "check-versions": "./node_modules/.bin/versions-checker --node \">= 4.0.0\" --npm \">=2.0.0\" ",
+        "check-versions": "./node_modules/.bin/versions-checker --node \">=4.0.0\" --npm \">=2.0.0\" ",
         "print-banner": "./bin/print-cli -b -c green \"print-cli\"",
         "commitmsg": "./node_modules/.bin/validate-commit-msg",
         "clean": "./node_modules/.bin/rimraf coverage .nyc_output",
@@ -87,14 +87,14 @@
     "dependencies": {
         "colors": "^1.1.2",
         "figlet": "^1.2.0",
-        "programmer": "^1.0.0",
+        "programmer": "^1.0.1",
         "uglify-es": "^3.1.0"
     },
     "devDependencies": {
         "chai": "^4.1.1",
         "child_process": "^1.0.2",
         "codecov": "^2.3.0",
-        "eslint": "^4.5.0",
+        "eslint": "^4.7.0",
         "husky": "^0.14.3",
         "mocha": "^3.5.3",
         "nyc": "^11.1.0",
@@ -102,6 +102,6 @@
         "rimraf": "^2.6.1",
         "sinon": "^3.2.1",
         "validate-commit-message": "^3.0.1",
-        "versions-checker": "^1.1.0"
+        "versions-checker": "^1.2.1"
     }
 }
