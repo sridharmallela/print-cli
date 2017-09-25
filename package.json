@@ -1,6 +1,6 @@
 {
     "name": "print-cli",
-    "version": "1.6.1",
+    "version": "1.6.2",
     "description": "print command line interface",
     "main": "./bin/index.js",
     "author": "Sridhar Mallela",
@@ -60,13 +60,21 @@
         ],
         "reporter": [
             "lcov",
-            "text"
+            "text",
+            "cobertura",
+            "json"
         ],
+        "check-coverage": true,
+        "per-file": true,
+        "lines": 99,
+        "statements": 99,
+        "functions": 99,
+        "branches": 99,
         "all": true
     },
     "scripts": {
         "check-versions": "./node_modules/.bin/versions-checker --node \">=4.0.0\" --npm \">=2.0.0\" ",
-        "print-banner": "./bin/print-cli -b -c green \"print-cli\"",
+        "print-banner": "./bin/print-cli -b -c green \"print cli\"",
         "commitmsg": "./node_modules/.bin/validate-commit-msg",
         "clean": "./node_modules/.bin/rimraf coverage .nyc_output",
         "lint": "./node_modules/.bin/eslint .",
@@ -87,20 +95,20 @@
     "dependencies": {
         "colors": "^1.1.2",
         "figlet": "^1.2.0",
-        "programmer": "^1.0.1",
-        "uglify-es": "^3.1.0"
+        "programmer": "^1.0.1"
     },
     "devDependencies": {
-        "chai": "^4.1.1",
+        "chai": "^4.1.2",
         "child_process": "^1.0.2",
         "codecov": "^2.3.0",
-        "eslint": "^4.7.0",
+        "eslint": "^4.7.2",
         "husky": "^0.14.3",
         "mocha": "^3.5.3",
-        "nyc": "^11.1.0",
+        "nyc": "^11.2.1",
         "path": "^0.12.7",
-        "rimraf": "^2.6.1",
-        "sinon": "^3.2.1",
+        "rimraf": "^2.6.2",
+        "sinon": "^3.3.0",
+        "uglify-es": "^3.1.2",
         "validate-commit-message": "^3.0.1",
         "versions-checker": "^1.2.1"
     }
