@@ -23,7 +23,6 @@
     "files": [
         "bin/print-cli",
         "bin/index.js",
-        "bin/options.js",
         "README.md"
     ],
     "bin": {

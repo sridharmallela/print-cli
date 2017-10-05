@@ -36,3 +36,5 @@ README.md
 .nyc_output
 assets
 .github
+sonar-project.properties
+.vscode
