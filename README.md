@@ -15,6 +15,20 @@
 
 [![Build Status](https://img.shields.io/travis/sridharmallela/print-cli.svg?style=plastic)](https://travis-ci.org/sridharmallela/print-cli) 
 [![codecov](https://codecov.io/gh/sridharmallela/print-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/sridharmallela/print-cli)
+[![Quality Gate](https://sonarcloud.io/api/badges/gate?key=com.sridharmallela.projects.printcli:master)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
+[![Lines of Code](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=ncloc)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
+[![Lines of Code](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=ncloc)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
+
+[![Bugs](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=bugs)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
+[![Code Smells](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=code_smells)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
+[![Critical Violations](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=critical_violations)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
+[![Blocker Violations](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=blocker_violations)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
+[![Technical Debt Ratio](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=sqale_debt_ratio)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
+
+[![Security Ratings](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=new_security_rating)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
+[![Reliability Ratings](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=new_reliability_rating)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
+[![Maintainability Ratings](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=new_maintainability_rating)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
+
 
 [![node](https://img.shields.io/node/v/sridharmallela/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
 [![David](https://img.shields.io/david/sridharmallela/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
