@@ -79,7 +79,8 @@
         "lint": "./node_modules/.bin/eslint .",
         "uglify-src": "./node_modules/.bin/uglifyjs ./lib/index.js -c -m -o ./bin/index.js",
         "uglify-cli": "./node_modules/.bin/uglifyjs ./lib/cli.js -c -m -o ./bin/print-cli",
-        "uglify": "npm run uglify-src && npm run uglify-cli",
+        "permissions": "./node_modules/.bin/chmod 755 ./bin/*",
+        "uglify": "npm run uglify-src && npm run uglify-cli && npm run permissions",
         "build": "npm run check-versions && npm run lint && npm run uglify",
         "test-unit": "./node_modules/.bin/nyc ./node_modules/.bin/mocha ./lib/*.spec.js",
         "test": "npm run build && npm run clean && npm run test-unit && npm run print-banner",
@@ -99,6 +100,7 @@
     "devDependencies": {
         "chai": "^4.1.2",
         "child_process": "^1.0.2",
+        "chmod": "^0.2.1",
         "codecov": "^2.3.0",
         "eslint": "^4.8.0",
         "husky": "^0.14.3",

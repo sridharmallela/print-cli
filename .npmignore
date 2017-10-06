@@ -38,3 +38,4 @@ assets
 .github
 sonar-project.properties
 .vscode
+bin/.gitkeep
