@@ -75,15 +75,15 @@
         "check-versions": "./node_modules/.bin/versions-checker --node \">=4.0.0\" --npm \">=2.0.0\" ",
         "print-banner": "./bin/print-cli -b -c green \"print cli\"",
         "commitmsg": "./node_modules/.bin/validate-commit-msg",
-        "clean": "./node_modules/.bin/rimraf coverage .nyc_output",
-        "lint": "./node_modules/.bin/eslint .",
+        "clean": "./node_modules/.bin/rimraf ./coverage ./.nyc_output ./bin/print-cli ./bin/index.js",
+        "lint": "./node_modules/.bin/eslint ./lib",
         "uglify-src": "./node_modules/.bin/uglifyjs ./lib/index.js -c -m -o ./bin/index.js",
         "uglify-cli": "./node_modules/.bin/uglifyjs ./lib/cli.js -c -m -o ./bin/print-cli",
         "permissions": "./node_modules/.bin/chmod 755 ./bin/*",
         "uglify": "npm run uglify-src && npm run uglify-cli && npm run permissions",
-        "build": "npm run check-versions && npm run lint && npm run uglify",
+        "build": "npm run check-versions && npm run lint && npm run clean && npm run uglify",
         "test-unit": "./node_modules/.bin/nyc ./node_modules/.bin/mocha ./lib/*.spec.js",
-        "test": "npm run build && npm run clean && npm run test-unit && npm run print-banner",
+        "test": "npm run build && npm run test-unit && npm run print-banner",
         "report-coverage": "./node_modules/.bin/nyc report --reporter=lcov > coverage.lcov",
         "code-coverage": "./node_modules/.bin/codecov",
         "coverage": "npm run report-coverage && npm run code-coverage",
@@ -95,7 +95,7 @@
     "dependencies": {
         "colors": "^1.1.2",
         "figlet": "^1.2.0",
-        "programmer": "^1.0.1"
+        "programmer": "^1.0.2"
     },
     "devDependencies": {
         "chai": "^4.1.2",
@@ -111,6 +111,6 @@
         "sinon": "^4.0.1",
         "uglify-es": "^3.1.3",
         "validate-commit-message": "^3.0.1",
-        "versions-checker": "^1.2.1"
+        "versions-checker": "^1.2.2"
     }
 }
