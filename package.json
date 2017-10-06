@@ -1,6 +1,6 @@
 {
     "name": "print-cli",
-    "version": "1.6.3",
+    "version": "1.7.0",
     "description": "print command line interface",
     "main": "./bin/index.js",
     "author": "Sridhar Mallela",
@@ -95,11 +95,10 @@
     "dependencies": {
         "colors": "^1.1.2",
         "figlet": "^1.2.0",
-        "programmer": "^1.0.2"
+        "programmer": "^1.1.1"
     },
     "devDependencies": {
         "chai": "^4.1.2",
-        "child_process": "^1.0.2",
         "chmod": "^0.2.1",
         "codecov": "^2.3.0",
         "eslint": "^4.8.0",
