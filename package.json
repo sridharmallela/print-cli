@@ -1,6 +1,6 @@
 {
     "name": "print-cli",
-    "version": "1.7.1",
+    "version": "1.7.3",
     "description": "print command line interface",
     "main": "./bin/index.js",
     "author": "Sridhar Mallela",
@@ -74,12 +74,13 @@
     "scripts": {
         "print-banner": "./bin/print-cli -b -c green \"print cli\"",
         "commitmsg": "./node_modules/.bin/validate-commit-msg",
-        "clean": "./node_modules/.bin/rimraf ./coverage ./.nyc_output ./bin/print-cli ./bin/index.js",
+        "clean": "./node_modules/.bin/rimraf ./coverage ./.nyc_output ./bin",
+        "make-bin": "./node_modules/.bin/mkdirp ./bin -m 755",
         "lint": "./node_modules/.bin/eslint ./lib",
         "uglify-src": "./node_modules/.bin/uglifyjs ./lib/index.js -c -m -o ./bin/index.js",
         "uglify-cli": "./node_modules/.bin/uglifyjs ./lib/cli.js -c -m -o ./bin/print-cli",
         "permissions": "./node_modules/.bin/chmod 755 ./bin/*",
-        "uglify": "npm run uglify-src && npm run uglify-cli && npm run permissions",
+        "uglify": "npm run make-bin && npm run uglify-src && npm run uglify-cli && npm run permissions",
         "build": "npm run lint && npm run clean && npm run uglify",
         "test-unit": "./node_modules/.bin/nyc ./node_modules/.bin/mocha ./lib/*.spec.js",
         "test": "npm run build && npm run test-unit && npm run print-banner",
@@ -94,7 +95,7 @@
     "dependencies": {
         "colors": "^1.1.2",
         "figlet": "^1.2.0",
-        "programmer": "^1.2.1"
+        "programmer": "^1.2.2"
     },
     "devDependencies": {
         "chai": "^4.1.2",
@@ -102,6 +103,7 @@
         "codecov": "^2.3.0",
         "eslint": "^4.8.0",
         "husky": "^0.14.3",
+        "mkdirp": "^0.5.1",
         "mocha": "^4.0.1",
         "nyc": "^11.2.1",
         "path": "^0.12.7",
