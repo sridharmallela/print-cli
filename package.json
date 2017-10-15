@@ -1,6 +1,6 @@
 {
     "name": "print-cli",
-    "version": "1.7.3",
+    "version": "1.7.4",
     "description": "print command line interface",
     "main": "./bin/index.js",
     "author": "Sridhar Mallela",
@@ -106,7 +106,6 @@
         "mkdirp": "^0.5.1",
         "mocha": "^4.0.1",
         "nyc": "^11.2.1",
-        "path": "^0.12.7",
         "rimraf": "^2.6.2",
         "sinon": "^4.0.1",
         "uglify-es": "^3.1.3",
