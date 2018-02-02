@@ -2,14 +2,11 @@ language: node_js
 
 node_js:
     - "stable"
+    - "8"
     - "7"
     - "6"
     - "5"
     - "4"
-
-dist: truthy
-
-sudo: required
 
 addons:
     sonarcloud:
@@ -19,18 +16,9 @@ addons:
         branches:
             - master
 
-os:
-    - linux
-
 branches:
     only:
         - master
-
-env:
-    - NODE_ENV=TEST
-
-jdk:
-    - oraclejdk8
 
 install:
     - npm install
@@ -43,3 +31,4 @@ script:
 cache:
     directories:
         - "$HOME/.sonar/cache"
+        - "node_modules"

@@ -62,3 +62,5 @@ package
 print-cli-*.tgz
 .history
 bin/
+**/.DS_Store
+.vscode
