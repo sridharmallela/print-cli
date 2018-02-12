@@ -6,11 +6,6 @@ node_js:
     - "6"
     - "5"
     - "4"
-    - "3"
-    - "2"
-    - "1"
-    - "0.12"
-    - "0.10"
 cache:
     directories:
         - "$HOME/.sonar/cache"
@@ -18,7 +13,8 @@ cache:
 install:
     - npm install
 script:
-    - npm test
+    - npm run build
+    - npm run test
     - npm run coverage
     - sonar-scanner
 addons:

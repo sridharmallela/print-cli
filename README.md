@@ -9,11 +9,12 @@
 
 [![GitHub tag](https://img.shields.io/github/tag/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/tags)
 [![GitHub release](https://img.shields.io/github/release/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/releases)
-[![GitHub issues](https://img.shields.io/github/issues/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/issues) 
+[![GitHub issues](https://img.shields.io/github/issues/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/pulls)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/print-cli/master/LICENSE)
 
-[![Build Status](https://img.shields.io/travis/sridharmallela/print-cli.svg?style=plastic)](https://travis-ci.org/sridharmallela/print-cli) 
+[![Build Status](https://img.shields.io/travis/sridharmallela/print-cli.svg?style=plastic)](https://travis-ci.org/sridharmallela/print-cli)
+[![Build status](https://ci.appveyor.com/api/projects/status/fh2ajt06377f0rhf?svg=true)](https://ci.appveyor.com/project/sridharmallela/print-cli)
 [![codecov](https://codecov.io/gh/sridharmallela/print-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/sridharmallela/print-cli)
 [![Quality Gate](https://sonarcloud.io/api/badges/gate?key=com.sridharmallela.projects.printcli:master)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
 [![Lines of Code](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=ncloc)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
@@ -88,14 +89,14 @@ Generate a printable representation of ASCII text. Thanks to [Figlet](https://ww
 <a id="markdown-usage" name="usage"></a>
 ## Usage
 
-```bash 
+```bash
 $ print-cli --banner --font slant "Hello World"
        __  __       __ __          _       __              __     __
       / / / /___   / // /____     | |     / /____   _____ / /____/ /
-     / /_/ // _ \ / // // __ \    | | /| / // __ \ / ___// // __  / 
-    / __  //  __// // // /_/ /    | |/ |/ // /_/ // /   / // /_/ /  
-   /_/ /_/ \___//_//_/ \____/     |__/|__/ \____//_/   /_/ \__,_/       
-                   
+     / /_/ // _ \ / // // __ \    | | /| / // __ \ / ___// // __  /
+    / __  //  __// // // /_/ /    | |/ |/ // /_/ // /   / // /_/ /
+   /_/ /_/ \___//_//_/ \____/     |__/|__/ \____//_/   /_/ \__,_/
+
 ```
 
 
@@ -139,17 +140,17 @@ $ print-cli --banner --font slant "Hello World"
 }
 ```
 
-```bash 
+```bash
 $ npm run print-banner
 
 > print-cli@1.4.4 print-banner /Users/a565550/git/print-cli
 > ./bin/print-cli -b -font standard -c green "print-cli"
-               _         _                _  _ 
+               _         _                _  _
   _ __   _ __ (_) _ __  | |_         ___ | |(_)
  | '_ \ | '__|| || '_ \ | __|_____  / __|| || |
  | |_) || |   | || | | || |_|_____|| (__ | || |
  | .__/ |_|   |_||_| |_| \__|       \___||_||_|
- |_|                                           
+ |_|
 
 ```
 
@@ -159,11 +160,11 @@ $ npm run print-banner
 
 
 <a id="markdown-help--h--help" name="help--h--help"></a>
-#### help (-h|--help) 
+#### help (-h|--help)
 
 * specifies how to use print-cli
 
-```bash 
+```bash
 $ print-cli --help
 
   Usage: print-cli [options] [text]
@@ -186,30 +187,30 @@ $ print-cli --help
 
 
 <a id="markdown-enablebanner--b--banner" name="enablebanner--b--banner"></a>
-#### enableBanner (-b|--banner) 
+#### enableBanner (-b|--banner)
 
 * specifies to enable ASCII banner
 
 
 <a id="markdown-font--f--font" name="font--f--font"></a>
-#### font (-f|--font) 
+#### font (-f|--font)
 
 * specifies font used to print the banner
     - standard (default)
-    - doom 
-    - slant 
-    - bell 
+    - doom
+    - slant
+    - bell
     - chunky
 
 ![Fonts-Usage](https://github.com/sridharmallela/print-cli/blob/master/assets/fonts.gif?raw=true)
 
 
 <a id="markdown-color--c--color" name="color--c--color"></a>
-#### color (-c|--color) 
+#### color (-c|--color)
 
 * specifies color of the text being printed
     - blue
-    - black 
+    - black
     - cyan
     - green
     - grey
@@ -218,14 +219,14 @@ $ print-cli --help
     - white
     - yellow
     - rainbow
-    - zebra 
+    - zebra
     - america
 
 ![Colors-Usage](https://github.com/sridharmallela/print-cli/blob/master/assets/colors.gif?raw=true)
 
 
 <a id="markdown-background-color---bg-color" name="background-color---bg-color"></a>
-#### background color (--bg-color) 
+#### background color (--bg-color)
 
 * specifies background color of the printed text
     - bgBlack
