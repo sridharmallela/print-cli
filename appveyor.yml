@@ -10,9 +10,9 @@ cache:
     - node_modules
 install:
     - npm install
-build:
-    - npm run build
+build: off
 test_script:
     - node --version
     - npm --version
+    - npm run build
 version: "{build}"
