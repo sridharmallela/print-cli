@@ -1,29 +1,26 @@
 language: node_js
 node_js:
-    - "stable"
-    - "8"
-    - "7"
-    - "6"
-    - "5"
-    - "4"
+  - "stable"
+  - "18"
+  - "20"
 cache:
-    directories:
-        - "$HOME/.sonar/cache"
-        - "node_modules"
+  directories:
+    - "$HOME/.sonar/cache"
+    - "node_modules"
 install:
-    - npm install
+  - npm install
 script:
-    - npm run build
-    - npm run test
-    - npm run coverage
-    - sonar-scanner
+  - npm run build
+  - npm run test
+  - npm run coverage
+  - sonar-scanner
 addons:
-    sonarcloud:
-        organization: "sridharmallela-github"
-        token:
-            secure: "l5nvpjI/feBpFPMYBeIp4JbNGCHYcmD0U5xU17jA0rn82QWdtfYUC1RKSpoUkoxWt5bgmZjCMtcDlZSrWluAiIu09czN2IHzfPFtNldDVcKqeOV8n3TY2Uba+TTRTGy3xV4Yb9cEYYcKEEZMEGrZFhjllnB7mdtuIkPDT+RKq3NukNLxxHWxtXhTDSaZRLutTHURFsYn/FIQqXS/kpZyaxa92WHa1tIanHaLdDwqvGqrz9tklzqVvRJH3gsyspTeVyCOC1PBue3mNWsisXdZencEZN/opG51IyuVBIfRBLGZSDHh+T6fUhILTBaQiGaCAEYsLj+X4iU1koJo4FOQeYSLxYHYdV6ysZbCdaTGa3wFRgOOqRsX2u6rrCcYNHgstRK8Pg2gldYqqxfX5SS+80mOxnoekhSTSd1coGpEv6jEA2uOHNmoTmJVAr1tO8AdDnauIGNEw268TSELHtd5yULA8nwnhcQ38yBjbnzKq1YthViunGNwhFKrsCgpNpNl2vpJc0ngp63fkmPNErQKr1V5MTvP7F8H8bs3PTbgVsvQVmXN76lm8nIaDXbgn2YSuqjLktQNnmt/Ayotg1pb4uWRglzmMRjbtgDZvLuTJjVCCoXtHdj/jBYAoJEgjRIvVUHBoV2v5Zpu12RcCDeD3yxztmyPknV4sxEzdwkU1ZQ="
-        branches:
-            - master
+  sonarcloud:
+    organization: "sridharmallela-github"
+    token:
+      secure: "l5nvpjI/feBpFPMYBeIp4JbNGCHYcmD0U5xU17jA0rn82QWdtfYUC1RKSpoUkoxWt5bgmZjCMtcDlZSrWluAiIu09czN2IHzfPFtNldDVcKqeOV8n3TY2Uba+TTRTGy3xV4Yb9cEYYcKEEZMEGrZFhjllnB7mdtuIkPDT+RKq3NukNLxxHWxtXhTDSaZRLutTHURFsYn/FIQqXS/kpZyaxa92WHa1tIanHaLdDwqvGqrz9tklzqVvRJH3gsyspTeVyCOC1PBue3mNWsisXdZencEZN/opG51IyuVBIfRBLGZSDHh+T6fUhILTBaQiGaCAEYsLj+X4iU1koJo4FOQeYSLxYHYdV6ysZbCdaTGa3wFRgOOqRsX2u6rrCcYNHgstRK8Pg2gldYqqxfX5SS+80mOxnoekhSTSd1coGpEv6jEA2uOHNmoTmJVAr1tO8AdDnauIGNEw268TSELHtd5yULA8nwnhcQ38yBjbnzKq1YthViunGNwhFKrsCgpNpNl2vpJc0ngp63fkmPNErQKr1V5MTvP7F8H8bs3PTbgVsvQVmXN76lm8nIaDXbgn2YSuqjLktQNnmt/Ayotg1pb4uWRglzmMRjbtgDZvLuTJjVCCoXtHdj/jBYAoJEgjRIvVUHBoV2v5Zpu12RcCDeD3yxztmyPknV4sxEzdwkU1ZQ="
+    branches:
+      - master
 branches:
-    only:
-        - master
+  only:
+    - master

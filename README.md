@@ -1,4 +1,5 @@
 <a id="markdown-print-cli" name="print-cli"></a>
+
 # Print CLI
 
 [![npm](https://img.shields.io/npm/v/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
@@ -42,51 +43,53 @@ Generate a printable representation of ASCII text. Thanks to [Figlet](https://ww
 
 ![intro](https://github.com/sridharmallela/print-cli/blob/master/assets/intro.gif?raw=true)
 
-
 <a id="markdown-table-of-contents" name="table-of-contents"></a>
+
 ## Table of Contents
+
 <!-- TOC -->
 
 - [Print CLI](#print-cli)
-    - [Table of Contents](#table-of-contents)
-    - [Installation](#installation)
-        - [Global CLI](#global-cli)
-        - [Non CLI](#non-cli)
-    - [Usage](#usage)
-        - [Non CLI](#non-cli-1)
-        - [NPM Script](#npm-script)
-        - [Options](#options)
-            - [help (-h|--help)](#help--h--help)
-            - [enableBanner (-b|--banner)](#enablebanner--b--banner)
-            - [font (-f|--font)](#font--f--font)
-            - [color (-c|--color)](#color--c--color)
-            - [background color (--bg-color)](#background-color---bg-color)
-    - [Updating print-cli](#updating-print-cli)
-    - [License](#license)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+    - [Global CLI](#global-cli)
+    - [Non CLI](#non-cli)
+  - [Usage](#usage)
+    - [Non CLI](#non-cli-1)
+    - [NPM Script](#npm-script)
+    - [Options](#options)
+      - [help (-h|--help)](#help--h--help)
+      - [enableBanner (-b|--banner)](#enablebanner--b--banner)
+      - [font (-f|--font)](#font--f--font)
+      - [color (-c|--color)](#color--c--color)
+      - [background color (--bg-color)](#background-color---bg-color)
+  - [Updating print-cli](#updating-print-cli)
+  - [License](#license)
 
 <!-- /TOC -->
 
-
 <a id="markdown-installation" name="installation"></a>
+
 ## Installation
 
 <a id="markdown-global-cli" name="global-cli"></a>
+
 ### Global CLI
 
 ```bash
     $ npm install -g print-cli
 ```
 
-
 <a id="markdown-non-cli" name="non-cli"></a>
+
 ### Non CLI
 
 ```bash
     $ npm install --save print-cli
 ```
 
-
 <a id="markdown-usage" name="usage"></a>
+
 ## Usage
 
 ```bash
@@ -99,44 +102,44 @@ $ print-cli --banner --font slant "Hello World"
 
 ```
 
-
 <a id="markdown-non-cli-1" name="non-cli-1"></a>
+
 ### Non CLI
 
 ```js
-    var print = require('print-cli');
+var print = require("print-cli");
 
-    print.PRINT({
-        text: '',
-        isBanner: true|false,
-        font: 'standard|doom|slant|bell|chunky',
-        color: 'blue|black|cyan|green|grey|magenta|red|white|yellow',
-        bgColor: 'bgBlack|bgBlue|bgCyan|bgGreen|bgMagenta|bgRed|bgWhite|bgYellow'
-    });
+print.PRINT({
+  text: "",
+  isBanner: true | false,
+  font: "standard|doom|slant|bell|chunky",
+  color: "blue|black|cyan|green|grey|magenta|red|white|yellow",
+  bgColor: "bgBlack|bgBlue|bgCyan|bgGreen|bgMagenta|bgRed|bgWhite|bgYellow"
+});
 ```
 
 ```ts
-    import { PRINT } from 'print-cli';
+import { PRINT } from "print-cli";
 
-    PRINT({
-        text: '',
-        isBanner: true|false,
-        font: 'standard|doom|slant|bell|chunky',
-        color: 'blue|black|cyan|green|grey|magenta|red|white|yellow',
-        bgColor: 'bgBlack|bgBlue|bgCyan|bgGreen|bgMagenta|bgRed|bgWhite|bgYellow'
-    });
+PRINT({
+  text: "",
+  isBanner: true | false,
+  font: "standard|doom|slant|bell|chunky",
+  color: "blue|black|cyan|green|grey|magenta|red|white|yellow",
+  bgColor: "bgBlack|bgBlue|bgCyan|bgGreen|bgMagenta|bgRed|bgWhite|bgYellow"
+});
 ```
 
-
 <a id="markdown-npm-script" name="npm-script"></a>
+
 ### NPM Script
 
 ```json
 // package.json
 {
-    "scripts": {
-        "print-banner": "./bin/print-cli -b -font standard -c green \"print-cli\""
-    }
+  "scripts": {
+    "print-banner": "./bin/print-cli -b -font standard -c green \"print-cli\""
+  }
 }
 ```
 
@@ -154,15 +157,15 @@ $ npm run print-banner
 
 ```
 
-
 <a id="markdown-options" name="options"></a>
+
 ### Options
 
-
 <a id="markdown-help--h--help" name="help--h--help"></a>
+
 #### help (-h|--help)
 
-* specifies how to use print-cli
+- specifies how to use print-cli
 
 ```bash
 $ print-cli --help
@@ -185,74 +188,75 @@ $ print-cli --help
     $ print-cli --help
 ```
 
-
 <a id="markdown-enablebanner--b--banner" name="enablebanner--b--banner"></a>
+
 #### enableBanner (-b|--banner)
 
-* specifies to enable ASCII banner
-
+- specifies to enable ASCII banner
 
 <a id="markdown-font--f--font" name="font--f--font"></a>
+
 #### font (-f|--font)
 
-* specifies font used to print the banner
-    - standard (default)
-    - doom
-    - slant
-    - bell
-    - chunky
+- specifies font used to print the banner
+  - standard (default)
+  - doom
+  - slant
+  - bell
+  - chunky
 
 ![Fonts-Usage](https://github.com/sridharmallela/print-cli/blob/master/assets/fonts.gif?raw=true)
 
-
 <a id="markdown-color--c--color" name="color--c--color"></a>
+
 #### color (-c|--color)
 
-* specifies color of the text being printed
-    - blue
-    - black
-    - cyan
-    - green
-    - grey
-    - magenta
-    - red
-    - white
-    - yellow
-    - rainbow
-    - zebra
-    - america
+- specifies color of the text being printed
+  - blue
+  - black
+  - cyan
+  - green
+  - grey
+  - magenta
+  - red
+  - white
+  - yellow
+  - rainbow
+  - zebra
+  - america
 
 ![Colors-Usage](https://github.com/sridharmallela/print-cli/blob/master/assets/colors.gif?raw=true)
 
-
 <a id="markdown-background-color---bg-color" name="background-color---bg-color"></a>
+
 #### background color (--bg-color)
 
-* specifies background color of the printed text
-    - bgBlack
-    - bgBlue
-    - bgCyan
-    - bgGreen
-    - bgMagenta
-    - bgRed
-    - bgWhite
-    - bgYellow
+- specifies background color of the printed text
+  - bgBlack
+  - bgBlue
+  - bgCyan
+  - bgGreen
+  - bgMagenta
+  - bgRed
+  - bgWhite
+  - bgYellow
 
 ![Background-Colors-Usage](https://github.com/sridharmallela/print-cli/blob/master/assets/bg-colors.gif?raw=true)
 
-
 <a id="markdown-updating-print-cli" name="updating-print-cli"></a>
+
 ## Updating print-cli
 
 Global package:
+
 ```bash
     $ npm uninstall -g print-cli
     $ npm cache clean
     $ npm install -g print-cli@latest
 ```
 
-
 <a id="markdown-license" name="license"></a>
+
 ## License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

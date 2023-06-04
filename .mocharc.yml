@@ -1,0 +1,27 @@
+# This is an example Mocha config containing every Mocha option plus others.
+allow-uncaught: false
+async-only: false
+bail: false
+check-leaks: false
+color: true
+delay: false
+diff: true
+exit: false # could be expressed as "no-exit: true"
+extension: ["js"]
+fail-zero: true
+# needs to be used with grep or fgrep
+# invert: false
+node-option:
+  - "unhandled-rejections=strict" # without leading "--", also V8 flags
+package: "./package.json"
+parallel: false
+recursive: false
+reporter: "spec"
+retries: 1
+slow: "75"
+sort: false
+spec:
+  - "lib/**/*.spec.js" # the positional arguments!
+timeout: "2000" # same as "timeout: '2s'"
+# timeout: false # same as "timeout: 0"
+trace-warnings: true # node flags ok

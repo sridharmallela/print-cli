@@ -1,18 +1,15 @@
 environment:
-    matrix:
-        - nodejs_version: "4"
-        - nodejs_version: "5"
-        - nodejs_version: "6"
-        - nodejs_version: "7"
-        - nodejs_version: "8"
-        - nodejs_version: "9"
+  matrix:
+    - nodejs_version: "16"
+    - nodejs_version: "18"
+    - nodejs_version: "20"
 cache:
-    - node_modules
+  - node_modules
 install:
-    - npm install
+  - npm install
 build: off
 test_script:
-    - node --version
-    - npm --version
-    - npm run build
+  - node --version
+  - npm --version
+  - npm run build
 version: "{build}"

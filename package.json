@@ -1,6 +1,6 @@
 {
   "name": "print-cli",
-  "version": "1.8.0",
+  "version": "2.0.0",
   "description": "print command line interface",
   "main": "./bin/index.js",
   "author": "Sridhar Mallela",
@@ -29,21 +29,7 @@
     "print-cli": "./bin/print-cli"
   },
   "config": {
-    "unsafe-perm": true,
-    "validate-commit-msg": {
-      "types": [
-        "feat",
-        "fix",
-        "docs",
-        "style",
-        "refactor",
-        "test",
-        "chore"
-      ],
-      "warnOnFail": false,
-      "maxSubjectLength": 1500,
-      "helpMessage": "use karma style git commit pattern"
-    }
+    "unsafe-perm": true
   },
   "nyc": {
     "extension": [
@@ -72,43 +58,42 @@
     "all": true
   },
   "scripts": {
-    "print-banner": "./bin/print-cli -b -c green \"print cli\"",
-    "commitmsg": "./node_modules/.bin/validate-commit-msg",
-    "clean": "./node_modules/.bin/rimraf ./coverage ./.nyc_output ./bin",
-    "make-bin": "./node_modules/.bin/mkdirp ./bin -m 755",
-    "lint": "./node_modules/.bin/eslint ./lib",
-    "uglify-src": "./node_modules/.bin/uglifyjs ./lib/index.js -c -m -o ./bin/index.js",
-    "uglify-cli": "./node_modules/.bin/uglifyjs ./lib/cli.js -c -m -o ./bin/print-cli",
-    "permissions": "./node_modules/.bin/chmod 755 ./bin/*",
-    "uglify": "npm run make-bin && npm run uglify-src && npm run uglify-cli && npm run permissions",
     "build": "npm run lint && npm run clean && npm run uglify",
-    "test-unit": "./node_modules/.bin/nyc ./node_modules/.bin/mocha ./lib/*.spec.js",
-    "test": "npm run build && npm run test-unit && npm run print-banner",
-    "report-coverage": "./node_modules/.bin/nyc report --reporter=lcov > coverage.lcov",
-    "code-coverage": "./node_modules/.bin/codecov",
+    "clean": "rimraf ./coverage ./.nyc_output ./bin",
+    "code-coverage": "codecov",
     "coverage": "npm run report-coverage && npm run code-coverage",
+    "help": "npm test && ./bin/print-cli --help",
+    "lint": "eslint ./lib",
+    "make-bin": "mkdirp ./bin -m755",
+    "permissions": "chmod-cli -m 755 ./bin/print-cli",
     "precommit": "npm test",
-    "preversion": "npm test",
     "prepublishOnly": "npm test",
-    "help": "npm test && ./bin/print-cli --help"
+    "preversion": "npm test",
+    "print-banner": "node bin/print-cli -b -c green \"print cli\"",
+    "report-coverage": "nyc report --reporter=lcov > coverage.lcov",
+    "test": "npm run build && npm run test-unit && npm run print-banner",
+    "test-unit": "nyc mocha ./lib/*.spec.js",
+    "uglify": "npm run make-bin && npm run uglify-src && npm run uglify-cli && npm run permissions",
+    "uglify-cli": "uglifyjs ./lib/cli.js -c -m -o ./bin/print-cli",
+    "uglify-src": "uglifyjs ./lib/index.js -c -m -o ./bin/index.js"
   },
   "dependencies": {
-    "colors": "1.1.2",
-    "figlet": "1.2.0",
-    "programmer": "1.5.0"
+    "colors": "~1.4.0",
+    "figlet": "~1.6.0",
+    "programmer": "~2.0.0"
   },
   "devDependencies": {
-    "chai": "4.1.2",
-    "chmod": "0.2.1",
-    "codecov": "3.0.0",
-    "eslint": "4.16.0",
-    "husky": "0.14.3",
-    "mkdirp": "0.5.1",
-    "mocha": "5.0.0",
-    "nyc": "11.4.1",
-    "rimraf": "2.6.2",
-    "sinon": "4.2.2",
-    "uglify-es": "3.3.9",
-    "validate-commit-message": "3.0.1"
+    "chai": "~4.3.7",
+    "chmod-cli": "~1.0.4",
+    "codecov": "~3.8.3",
+    "eslint": "~8.42.0",
+    "husky": "~8.0.3",
+    "mkdirp": "~3.0.1",
+    "mocha": "~10.2.0",
+    "nyc": "~15.1.0",
+    "prettier": "~2.8.8",
+    "rimraf": "~5.0.1",
+    "sinon": "~15.1.0",
+    "uglify-es": "3.3.9"
   }
 }
