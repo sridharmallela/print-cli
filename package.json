@@ -39,16 +39,11 @@
     "permissions": "chmod-cli -m 777 \"./bin/print-cli\"",
     "prepare": "husky",
     "print-banner": "node \"./bin/print-cli\" -b -c green \"print cli\"",
-    "test": "npm run test-unit && npm run print-banner",
+    "test": "npm run lint && npm run test-unit && npm run print-banner",
     "test-unit": "jest --config \"./jest.config.js\" --detectOpenHandles",
     "uglify": "npm run make-bin && npm run uglify-src && npm run uglify-cli && npm run permissions",
     "uglify-cli": "uglifyjs \"./lib/cli.js\" -c -m -o \"./bin/print-cli\"",
     "uglify-src": "uglifyjs \"./lib/index.js\" -c -m -o \"./bin/index.js\""
-  },
-  "dependencies": {
-    "colors": "~1.4.0",
-    "figlet": "~1.8.0",
-    "programmer": "~3.0.1"
   },
   "devDependencies": {
     "chmod-cli": "~2.0.1",
@@ -61,5 +56,10 @@
     "prettier": "~3.4.2",
     "rimraf": "~6.0.1",
     "uglify-es": "3.3.10"
+  },
+  "dependencies": {
+    "colors": "~1.4.0",
+    "figlet": "~1.8.0",
+    "programmer": "~3.0.1"
   }
 }
