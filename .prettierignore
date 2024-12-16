@@ -7,4 +7,4 @@
 /.nyc_output
 /coverage
 /benchmark
-.github\workflows\node.js.yml
+.github/workflows
