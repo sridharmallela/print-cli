@@ -29,13 +29,11 @@ _config.yml
 .eslintignore
 .eslintrc
 .gitignore
-.vcmrc
-.travis.yml
 CHANGELOG.md
 README.md
-.nyc_output
 assets
 .github
-sonar-project.properties
-.vscode
-.history
+bin/.gitkeep
+.prettierrc
+.prettierignore
+jest.config.js
