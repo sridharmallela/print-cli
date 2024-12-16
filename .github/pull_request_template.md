@@ -1,10 +1,10 @@
 ### PRINT CLI Pull Request
 
 * **Please check if the PR fulfills these requirements**
-- [ ] Code follows the code style of this project.
-- [ ] The commit message follows karma commit guidelines
-- [ ] Tests for the changes have been added (for bug fixes / features)
-- [ ] Docs have been added / updated (for bug fixes / features)
+- [X] Code follows the code style of this project.
+- [X] The commit message follows karma commit guidelines
+- [X] Tests for the changes have been added (for bug fixes / features)
+- [X] Docs have been added / updated (for bug fixes / features)
 
 
 * **What kind of change does this PR introduce?** (Bug fix, feature, docs update, ...)
