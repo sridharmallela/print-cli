@@ -14,31 +14,6 @@
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/pulls)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/print-cli/master/LICENSE)
 
-[![Build Status](https://img.shields.io/travis/sridharmallela/print-cli.svg?style=plastic)](https://travis-ci.org/sridharmallela/print-cli)
-[![Build status](https://ci.appveyor.com/api/projects/status/fh2ajt06377f0rhf?svg=true)](https://ci.appveyor.com/project/sridharmallela/print-cli)
-[![codecov](https://codecov.io/gh/sridharmallela/print-cli/branch/master/graph/badge.svg)](https://codecov.io/gh/sridharmallela/print-cli)
-[![Quality Gate](https://sonarcloud.io/api/badges/gate?key=com.sridharmallela.projects.printcli:master)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
-[![Lines of Code](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=ncloc)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
-
-[![Bugs](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=bugs)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
-[![Code Smells](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=code_smells)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
-[![Critical Violations](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=critical_violations)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
-[![Blocker Violations](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=blocker_violations)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
-[![Technical Debt Ratio](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=sqale_debt_ratio)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
-
-[![Security Ratings](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=new_security_rating)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
-[![Reliability Ratings](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=new_reliability_rating)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
-[![Maintainability Ratings](https://sonarcloud.io/api/badges/measure?key=com.sridharmallela.projects.printcli:master&metric=new_maintainability_rating)](https://sonarcloud.io/dashboard/index/com.sridharmallela.projects.printcli:master)
-
-[![node](https://img.shields.io/node/v/sridharmallela/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
-[![David](https://img.shields.io/david/sridharmallela/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
-[![David](https://img.shields.io/david/dev/sridharmallela/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
-[![David](https://img.shields.io/david/optional/sridharmallela/print-cli.svg?style=plastic)](https://www.npmjs.com/package/print-cli)
-
-[![GitHub forks](https://img.shields.io/github/forks/sridharmallela/print-cli.svg?style=social&label=Fork)](https://github.com/sridharmallela/print-cli/)
-[![GitHub stars](https://img.shields.io/github/stars/sridharmallela/print-cli.svg?style=social&label=Star)](https://github.com/sridharmallela/print-cli/)
-[![GitHub watchers](https://img.shields.io/github/watchers/sridharmallela/print-cli.svg?style=social&label=Watch)](https://github.com/sridharmallela/print-cli/)
-
 Generate a printable representation of ASCII text. Thanks to [Figlet](https://www.npmjs.com/package/figlet). Try it [here](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
 
 ![intro](https://github.com/sridharmallela/print-cli/blob/master/assets/intro.gif?raw=true)

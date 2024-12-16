@@ -1,21 +1,20 @@
 {
-  "semi": true,
-  "printWidth": 120,
-  "tabWidth": 2,
-  "useTabs": false,
-  "jsxSingleQuote": false,
-  "bracketSameLine": true,
   "arrowParens": "avoid",
+  "bracketSameLine": true,
   "endOfLine": "lf",
-  "proseWrap": "preserve",
-  "trailingComma": "none",
+  "jsxSingleQuote": false,
   "overrides": [
     {
       "files": "{*.ts,*.js,*.scss}",
       "options": {
-        "tabWidth": 4,
         "singleQuote": true
       }
     }
-  ]
+  ],
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "semi": true,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "useTabs": false
 }
