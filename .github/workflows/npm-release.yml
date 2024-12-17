@@ -6,7 +6,7 @@ name: Print CLI Package Publish
 on:
   push:
     branches:
-      - master
+      - main
 
 permissions:
   contents: write

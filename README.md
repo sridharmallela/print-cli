@@ -12,11 +12,11 @@
 [![GitHub release](https://img.shields.io/github/release/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/releases)
 [![GitHub issues](https://img.shields.io/github/issues/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/sridharmallela/print-cli.svg?style=plastic)](https://github.com/sridharmallela/print-cli/pulls)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/print-cli/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/sridharmallela/print-cli/main/LICENSE)
 
 Generate a printable representation of ASCII text. Thanks to [Figlet](https://www.npmjs.com/package/figlet). Try it [here](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
 
-![intro](https://github.com/sridharmallela/print-cli/blob/master/assets/intro.gif?raw=true)
+![intro](https://github.com/sridharmallela/print-cli/blob/main/assets/intro.gif?raw=true)
 
 <a id="markdown-table-of-contents" name="table-of-contents"></a>
 
@@ -180,7 +180,7 @@ $ print-cli --help
   - bell
   - chunky
 
-![Fonts-Usage](https://github.com/sridharmallela/print-cli/blob/master/assets/fonts.gif?raw=true)
+![Fonts-Usage](https://github.com/sridharmallela/print-cli/blob/main/assets/fonts.gif?raw=true)
 
 <a id="markdown-color--c--color" name="color--c--color"></a>
 
@@ -200,7 +200,7 @@ $ print-cli --help
   - zebra
   - america
 
-![Colors-Usage](https://github.com/sridharmallela/print-cli/blob/master/assets/colors.gif?raw=true)
+![Colors-Usage](https://github.com/sridharmallela/print-cli/blob/main/assets/colors.gif?raw=true)
 
 <a id="markdown-background-color---bg-color" name="background-color---bg-color"></a>
 
@@ -216,7 +216,7 @@ $ print-cli --help
   - bgWhite
   - bgYellow
 
-![Background-Colors-Usage](https://github.com/sridharmallela/print-cli/blob/master/assets/bg-colors.gif?raw=true)
+![Background-Colors-Usage](https://github.com/sridharmallela/print-cli/blob/main/assets/bg-colors.gif?raw=true)
 
 <a id="markdown-updating-print-cli" name="updating-print-cli"></a>
 
